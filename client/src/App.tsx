@@ -11,6 +11,7 @@ import Dashboard from "./pages/Dashboard";
 import NewAbout from "./pages/NewAbout";
 import NewHowItWorks from "./pages/NewHowItWorks";
 import NewWhatWeDo from "./pages/NewWhatWeDo";
+import NewWhyFree from "./pages/NewWhyFree";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import Terms from "./pages/Terms";
@@ -40,6 +41,7 @@ function Router() {
       <Route path={"/how-to-play"} component={NewHowItWorks} />
       <Route path={"/how-it-works"} component={NewHowItWorks} />
       <Route path={"/what-we-do"} component={NewWhatWeDo} />
+      <Route path={"/why-free"} component={NewWhyFree} />
       <Route path={"/faq"} component={FAQ} />
       <Route path={"/contact"} component={Contact} />
       <Route path={"/terms"} component={Terms} />
