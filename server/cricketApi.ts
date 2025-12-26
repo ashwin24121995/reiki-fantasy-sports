@@ -7,7 +7,7 @@
 import axios, { AxiosInstance } from 'axios';
 
 const CRICKET_API_BASE_URL = 'https://api.cricapi.com/v1';
-const CRICKET_API_KEY = process.env.CRICKET_API_KEY || 'afb22ee0-add7-48b4-af1d-bdf319c03c9d';
+const CRICKET_API_KEY = process.env.CRICKET_API_KEY || '1a822521-d7e0-46ff-98d3-3e51020863f3';
 
 // API response types
 interface ApiResponse<T> {

@@ -16,6 +16,7 @@ import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import FairPlay from "./pages/FairPlay";
 import ResponsibleGaming from "./pages/ResponsibleGaming";
+import Matches from "./pages/Matches";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -25,6 +26,7 @@ function Router() {
       <Route path={"/login"} component={Login} />
       <Route path={"/register"} component={Register} />
       <Route path={"/dashboard"} component={Dashboard} />
+      <Route path={"/matches"} component={Matches} />
       <Route path={"/about"} component={About} />
       <Route path={"/how-to-play"} component={HowToPlay} />
       <Route path={"/faq"} component={FAQ} />
