@@ -12,8 +12,8 @@ import NewAbout from "./pages/NewAbout";
 import NewHowItWorks from "./pages/NewHowItWorks";
 import NewWhatWeDo from "./pages/NewWhatWeDo";
 import NewWhyFree from "./pages/NewWhyFree";
-import FAQ from "./pages/FAQ";
-import Contact from "./pages/Contact";
+import NewFAQ from "./pages/NewFAQ";
+import NewContact from "./pages/NewContact";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import FairPlay from "./pages/FairPlay";
@@ -42,8 +42,8 @@ function Router() {
       <Route path={"/how-it-works"} component={NewHowItWorks} />
       <Route path={"/what-we-do"} component={NewWhatWeDo} />
       <Route path={"/why-free"} component={NewWhyFree} />
-      <Route path={"/faq"} component={FAQ} />
-      <Route path={"/contact"} component={Contact} />
+      <Route path={"/faq"} component={NewFAQ} />
+      <Route path={"/contact"} component={NewContact} />
       <Route path={"/terms"} component={Terms} />
       <Route path={"/privacy"} component={Privacy} />
       <Route path={"/fair-play"} component={FairPlay} />

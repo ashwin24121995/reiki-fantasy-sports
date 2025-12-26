@@ -182,8 +182,8 @@
 - [x] Redesign How It Works page (step-by-step visual guide)
 - [x] Redesign What We Do page (platform features explanation)
 - [x] Redesign Why We Are Free page (business model transparency)
-- [ ] Update FAQ page with new design system
-- [ ] Update Contact page with new design system
+- [x] Update FAQ page with new design system
+- [x] Update Contact page with new design system
 - [ ] Update all legal pages with new design system
 
 ### Design System
