@@ -8,6 +8,10 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
+import About from "./pages/About";
+import HowToPlay from "./pages/HowToPlay";
+import FAQ from "./pages/FAQ";
+import Contact from "./pages/Contact";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -17,6 +21,10 @@ function Router() {
       <Route path={"/login"} component={Login} />
       <Route path={"/register"} component={Register} />
       <Route path={"/dashboard"} component={Dashboard} />
+      <Route path={"/about"} component={About} />
+      <Route path={"/how-to-play"} component={HowToPlay} />
+      <Route path={"/faq"} component={FAQ} />
+      <Route path={"/contact"} component={Contact} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
