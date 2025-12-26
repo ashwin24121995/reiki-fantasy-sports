@@ -168,3 +168,41 @@
 **Phase 4**: ✅ COMPLETED
 **Phase 7**: ✅ COMPLETED
 **Overall Progress**: ~35% complete
+
+## REDESIGN PHASE - Complete Platform Overhaul
+
+### Global Components
+- [x] Create global dynamic Header component (changes based on login state)
+- [x] Create global dynamic Footer component (with language support)
+- [ ] Integrate Header and Footer into all pages
+
+### Page Redesigns
+- [x] Redesign Homepage with modern design, animations, gradients
+- [ ] Redesign About Us page (deep detail: who we are, mission, story, values, legal)
+- [ ] Redesign How It Works page (step-by-step visual guide)
+- [ ] Redesign What We Do page (platform features explanation)
+- [ ] Redesign Why We Are Free page (business model transparency)
+- [ ] Update FAQ page with new design system
+- [ ] Update Contact page with new design system
+- [ ] Update all legal pages with new design system
+
+### Design System
+- [ ] Implement gradient backgrounds
+- [ ] Add scroll animations (fade in, slide up)
+- [ ] Add cricket-themed imagery
+- [ ] Ensure modern card designs with shadows
+- [ ] Implement responsive grid layouts
+- [ ] Add generous white space
+
+### Language System
+- [ ] Expand translations for all new content (5 languages)
+- [ ] Ensure complete language switching (no mixed languages)
+- [ ] Test all pages in all languages
+
+### Testing & Deployment
+- [ ] Test header/footer on all pages
+- [ ] Test login/logout state changes
+- [ ] Test all pages in all 5 languages
+- [ ] Test responsive design on mobile/tablet/desktop
+- [ ] Push final redesign to GitHub
+- [ ] Deploy to Railway

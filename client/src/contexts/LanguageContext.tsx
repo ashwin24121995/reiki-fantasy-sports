@@ -60,6 +60,30 @@ export function useLanguage() {
 // Translations
 const translations: Record<Language, any> = {
   en: {
+    nav: {
+      home: 'Home',
+      about: 'About Us',
+      howItWorks: 'How It Works',
+      whatWeDo: 'What We Do',
+      whyFree: 'Why Free',
+      faq: 'FAQ',
+      contact: 'Contact',
+      dashboard: 'Dashboard',
+      matches: 'Matches',
+      myTeams: 'My Teams',
+      leaderboard: 'Leaderboard',
+      profile: 'Profile',
+      settings: 'Settings',
+    },
+    theme: {
+      light: 'Light Mode',
+      dark: 'Dark Mode',
+    },
+    auth: {
+      login: 'Login',
+      register: 'Register',
+      logout: 'Logout',
+    },
     common: {
       home: 'Home',
       about: 'About Us',
@@ -135,12 +159,20 @@ const translations: Record<Language, any> = {
       selectState: 'Select your state',
     },
     footer: {
+      tagline: 'Free-to-play fantasy cricket education platform',
       companyInfo: 'Company Information',
       quickLinks: 'Quick Links',
       legal: 'Legal',
-      disclaimer: 'Legal Disclaimer',
+      compliance: 'Compliance',
+      ageRestriction: '18+ Only',
+      onlyAdults: 'Adults only',
+      fairPlay: 'Fair Play',
+      skillBased: 'Skill-based platform',
+      legalDisclaimer: 'Legal Disclaimer',
       disclaimerText:
         'This platform is NOT available in Andhra Pradesh, Assam, Odisha, Telangana, Nagaland, and Sikkim. Only users 18 years and older are permitted. This is a skill-based, free-to-play platform with no real money involved.',
+      allRightsReserved: 'All rights reserved.',
+      freeToPlay: 'Free-to-play educational platform. No real money. No gambling.',
     },
   },
   hi: {
