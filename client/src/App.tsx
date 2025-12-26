@@ -12,6 +12,10 @@ import About from "./pages/About";
 import HowToPlay from "./pages/HowToPlay";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
+import FairPlay from "./pages/FairPlay";
+import ResponsibleGaming from "./pages/ResponsibleGaming";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -25,6 +29,10 @@ function Router() {
       <Route path={"/how-to-play"} component={HowToPlay} />
       <Route path={"/faq"} component={FAQ} />
       <Route path={"/contact"} component={Contact} />
+      <Route path={"/terms"} component={Terms} />
+      <Route path={"/privacy"} component={Privacy} />
+      <Route path={"/fair-play"} component={FairPlay} />
+      <Route path={"/responsible-gaming"} component={ResponsibleGaming} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
