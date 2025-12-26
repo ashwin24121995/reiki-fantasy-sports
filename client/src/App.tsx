@@ -8,8 +8,8 @@ import NewHome from "./pages/NewHome";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
-import About from "./pages/About";
-import HowToPlay from "./pages/HowToPlay";
+import NewAbout from "./pages/NewAbout";
+import NewHowItWorks from "./pages/NewHowItWorks";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import Terms from "./pages/Terms";
@@ -35,8 +35,9 @@ function Router() {
       <Route path={"/leaderboard"} component={Leaderboard} />
       <Route path={"/my-teams"} component={MyTeams} />
       <Route path={"/profile"} component={Profile} />
-      <Route path={"/about"} component={About} />
-      <Route path={"/how-to-play"} component={HowToPlay} />
+      <Route path={"/about"} component={NewAbout} />
+      <Route path={"/how-to-play"} component={NewHowItWorks} />
+      <Route path={"/how-it-works"} component={NewHowItWorks} />
       <Route path={"/faq"} component={FAQ} />
       <Route path={"/contact"} component={Contact} />
       <Route path={"/terms"} component={Terms} />
