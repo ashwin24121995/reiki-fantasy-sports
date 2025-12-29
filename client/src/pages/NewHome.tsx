@@ -65,8 +65,8 @@ export default function NewHome() {
                     <CheckCircle2 className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold">No Real Money</h3>
-                    <p className="text-sm text-muted-foreground">Pure skill-based learning</p>
+                    <h3 className="text-lg font-bold">No Real Money</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Pure skill-based learning</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -74,8 +74,8 @@ export default function NewHome() {
                     <CheckCircle2 className="w-5 h-5 text-secondary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold">Real Cricket Data</h3>
-                    <p className="text-sm text-muted-foreground">Live scores & updates</p>
+                    <h3 className="text-lg font-bold">Real Cricket Data</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Live scores & updates</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -83,8 +83,8 @@ export default function NewHome() {
                     <CheckCircle2 className="w-5 h-5 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold">Fair Play Certified</h3>
-                    <p className="text-sm text-muted-foreground">Transparent scoring</p>
+                    <h3 className="text-lg font-bold">Fair Play Certified</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Transparent scoring</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -92,8 +92,8 @@ export default function NewHome() {
                     <CheckCircle2 className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold">Legal & Compliant</h3>
-                    <p className="text-sm text-muted-foreground">Age & state verified</p>
+                    <h3 className="text-lg font-bold">Legal & Compliant</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Age & state verified</p>
                   </div>
                 </div>
               </div>
@@ -299,7 +299,7 @@ export default function NewHome() {
                         {item.points}
                       </Badge>
                     </div>
-                    <p className="text-sm text-muted-foreground">{item.detail}</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{item.detail}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -338,7 +338,7 @@ export default function NewHome() {
                         {item.points}
                       </Badge>
                     </div>
-                    <p className="text-sm text-muted-foreground">{item.detail}</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{item.detail}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -373,7 +373,7 @@ export default function NewHome() {
                         {item.points}
                       </Badge>
                     </div>
-                    <p className="text-sm text-muted-foreground">{item.detail}</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{item.detail}</p>
                   </CardContent>
                 </Card>
               ))}
