@@ -30,7 +30,7 @@ export async function upsertUser(user: InsertUser): Promise<void> {
   }
 
   try {
-    const values: InsertUser = {
+    const values: Partial<InsertUser> = {
       openId: user.openId,
     };
     const updateSet: Record<string, unknown> = {};
@@ -39,10 +39,10 @@ export async function upsertUser(user: InsertUser): Promise<void> {
     type TextField = (typeof textFields)[number];
 
     const assignNullable = (field: TextField) => {
-      const value = user[field];
+      const value = user[field as keyof InsertUser];
       if (value === undefined) return;
       const normalized = value ?? null;
-      values[field] = normalized;
+      (values as any)[field] = normalized;
       updateSet[field] = normalized;
     };
 

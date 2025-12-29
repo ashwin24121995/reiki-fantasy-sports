@@ -47,7 +47,7 @@ export async function createContest(
       createdBy,
     });
 
-    return Number(result.insertId);
+    return Number((result as any).insertId);
   } catch (error) {
     console.error("[Database] Failed to create contest:", error);
     throw error;
@@ -144,7 +144,7 @@ export async function joinContest(
       totalPoints: "0.00",
     });
 
-    return Number(result.insertId);
+    return Number((result as any).insertId);
   } catch (error) {
     console.error("[Database] Failed to join contest:", error);
     throw error;

@@ -4,7 +4,7 @@
  */
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { trpc } from '@/lib/trpc';
+import { trpc, trpcClient } from '@/lib/trpc';
 
 interface User {
   id: number;
@@ -54,7 +54,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const fetchUser = async () => {
     try {
       // The auth.me procedure reads from cookie automatically
-      const userData = await trpc.auth.me.query();
+      const userData = await trpcClient.auth.me.query();
       
       if (userData) {
         setUser(userData as User);

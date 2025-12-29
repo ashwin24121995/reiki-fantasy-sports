@@ -47,14 +47,14 @@ export default function NewHome() {
               </div>
 
               <div className="space-y-4">
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
                   Master Your{" "}
                   <span className="gradient-text">
                     Fantasy Cricket
                   </span>{" "}
                   Skills
                 </h1>
-                <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl">
+                <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-2xl">
                   Learn fantasy cricket strategies without spending a rupee. Build teams, join contests, and compete with thousands of players.
                 </p>
               </div>
@@ -101,14 +101,14 @@ export default function NewHome() {
               <div className="flex flex-wrap gap-4">
                 {user ? (
                   <Link href="/dashboard">
-                    <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105">
+                    <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105 w-full sm:w-auto">
                       Go to Dashboard
                       <ArrowRight className="ml-2 w-5 h-5" />
                     </Button>
                   </Link>
                 ) : (
                   <Link href="/register">
-                    <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105">
+                    <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105 w-full sm:w-auto">
                       Start Learning Free
                       <ArrowRight className="ml-2 w-5 h-5" />
                     </Button>
@@ -116,8 +116,6 @@ export default function NewHome() {
                 )}
 
               </div>
-
-
             </div>
 
             <div className="relative animate-slide-in-right">
@@ -161,10 +159,10 @@ export default function NewHome() {
             <Badge className="bg-primary/10 text-primary px-4 py-2">
               Simple Process
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
               How <span className="gradient-text">REIKI ENERGY</span> Works
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-lg sm:text-xl text-muted-foreground">
               Start your fantasy cricket journey in 4 simple steps. No payment required, just pure skill and strategy.
             </p>
           </div>
@@ -261,10 +259,10 @@ export default function NewHome() {
             <Badge className="bg-secondary/10 text-secondary px-4 py-2">
               Scoring System
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
               Fantasy <span className="gradient-text">Points System</span>
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-lg sm:text-xl text-muted-foreground">
               Understand how players earn points in real-time based on their actual match performance.
             </p>
           </div>
@@ -392,10 +390,10 @@ export default function NewHome() {
               <Badge className="bg-primary/10 text-primary px-4 py-2">
                 Multiplier Boost
               </Badge>
-              <h2 className="text-4xl md:text-5xl font-bold">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
                 Captain & <span className="gradient-text">Vice-Captain</span>
               </h2>
-              <p className="text-xl text-muted-foreground">
+              <p className="text-lg sm:text-xl text-muted-foreground">
                 Strategic selection of captain and vice-captain can double or triple your points. Choose wisely based on form, pitch conditions, and match-ups.
               </p>
 
@@ -525,10 +523,10 @@ export default function NewHome() {
                 <Activity className="w-4 h-4 mr-2 inline" />
                 Live Now
               </Badge>
-              <h2 className="text-4xl md:text-5xl font-bold">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
                 Current <span className="gradient-text">Cricket Matches</span>
               </h2>
-              <p className="text-xl text-muted-foreground">
+              <p className="text-lg sm:text-xl text-muted-foreground">
                 Join ongoing contests or create your team for upcoming matches
               </p>
             </div>

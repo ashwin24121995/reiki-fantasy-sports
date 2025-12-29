@@ -42,13 +42,13 @@ export async function createTeam(
       totalCredits: 100, // Free to play - no budget system
     });
 
-    const teamId = Number(result.insertId);
+    const teamId = Number((result as any).insertId);
 
     // Insert team players
     const teamPlayerRecords: InsertTeamPlayer[] = playerIds.map((playerId) => ({
       teamId,
       playerId,
-      credits: 10, // Equal credits for all players (free to play)
+      credits: "10", // Equal credits for all players (free to play) - stored as string
     }));
 
     await db.insert(teamPlayers).values(teamPlayerRecords);
