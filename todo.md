@@ -578,3 +578,52 @@ Section: Feature cards below hero (No Real Money, Real Cricket Data, Fair Play C
 - [x] Ensure consistent typography - All 4 cards now have matching styles
 - [x] Test improvements - Verified in browser, looks professional
 - [ ] Save checkpoint - NEXT
+
+
+---
+
+## 🎨 COMPREHENSIVE WEBSITE REDESIGN - Dec 30, 2025
+
+**User Request: Major redesign with image carousel, new sections, enhanced pages, and new logo**
+
+### Phase 1: Logo & Images Generation
+- [ ] Generate new REIKI ENERGY logo (professional, cricket-themed)
+- [ ] Generate multiple cricket stadium images for carousel
+- [ ] Generate cricket action shots (batting, bowling, fielding)
+
+### Phase 2: Hero Section Image Carousel
+- [ ] Implement image carousel/slideshow component
+- [ ] Add smooth fade/slide animations between images
+- [ ] Add 4-5 cricket stadium and action images
+- [ ] Add auto-play with manual controls
+- [ ] Optimize images for web performance
+
+### Phase 3: CTA Section Redesign
+- [ ] Redesign "Ready to Master Fantasy Cricket?" section
+- [ ] Improve gradient background design
+- [ ] Better typography and spacing
+- [ ] More engaging visual elements
+- [ ] Responsive design improvements
+
+### Phase 4: Live & Upcoming Matches Sections
+- [ ] Create "Live Matches" section on homepage
+- [ ] Create "Upcoming Matches" section on homepage
+- [ ] Design match cards with team logos, scores, timing
+- [ ] Add real-time data integration
+- [ ] Add "View All" links to full pages
+
+### Phase 5: Enhance All Pages
+- [ ] Matches page - add filters, search, detailed match info
+- [ ] Contests page - add contest types, prize details, entry info
+- [ ] Leaderboard page - add rankings, stats, user profiles
+- [ ] Profile page - add detailed stats, achievements, history
+- [ ] Dashboard - add analytics, insights, recommendations
+- [ ] About Us page - add company story, mission, team
+- [ ] FAQ page - add comprehensive Q&A
+- [ ] Contact page - add form, support info
+
+### Phase 6: Testing & Deployment
+- [ ] Test all new features
+- [ ] Test responsive design on all devices
+- [ ] Optimize performance
+- [ ] Save final checkpoint

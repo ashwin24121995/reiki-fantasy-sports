@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "wouter";
 import { useAuth } from "@/contexts/AuthContext";
 import { trpc } from "@/lib/trpc";
@@ -9,12 +10,36 @@ import { Badge } from "@/components/ui/badge";
 import { 
   Trophy, Users, Target, TrendingUp, Zap, Shield, 
   CheckCircle2, ArrowRight, Play, Star, Award,
-  Activity, BarChart3, Clock, MapPin
+  Activity, BarChart3, Clock, MapPin, ChevronLeft, ChevronRight
 } from "lucide-react";
 
 export default function NewHome() {
   const { user } = useAuth();
   const { data: matches, isLoading } = trpc.cricket.getCurrentMatches.useQuery();
+  
+  const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
+  const carouselImages = [
+    '/cricket-stadium-1.jpg',
+    '/cricket-stadium-2.jpg',
+    '/cricket-action-1.jpg',
+    '/cricket-action-2.jpg'
+  ];
+
+  // Auto-play carousel
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % carouselImages.length);
+    }, 5000); // Change image every 5 seconds
+    return () => clearInterval(interval);
+  }, []);
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % carouselImages.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -119,13 +144,53 @@ export default function NewHome() {
             </div>
 
             <div className="relative animate-slide-in-right">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-primary/20">
-                <img 
-                  src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=800&h=600&fit=crop" 
-                  alt="Cricket Stadium" 
-                  className="w-full h-auto"
-                />
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-primary/20 group">
+                {/* Carousel Images */}
+                <div className="relative h-[400px] md:h-[500px] lg:h-[600px]">
+                  {carouselImages.map((image, index) => (
+                    <img
+                      key={image}
+                      src={image}
+                      alt={`Cricket ${index + 1}`}
+                      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                        index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                      }`}
+                    />
+                  ))}
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
+                
+                {/* Carousel Controls */}
+                <button
+                  onClick={prevImage}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background text-foreground p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+                  aria-label="Previous image"
+                >
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+                <button
+                  onClick={nextImage}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background text-foreground p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+                  aria-label="Next image"
+                >
+                  <ChevronRight className="w-6 h-6" />
+                </button>
+                
+                {/* Carousel Indicators */}
+                <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-2">
+                  {carouselImages.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`w-2 h-2 rounded-full transition-all ${
+                        index === currentImageIndex 
+                          ? 'bg-primary w-8' 
+                          : 'bg-white/50 hover:bg-white/75'
+                      }`}
+                      aria-label={`Go to image ${index + 1}`}
+                    />
+                  ))}
+                </div>
                 
                 <div className="absolute bottom-6 left-6 right-6">
                   <Card className="glass border-primary/20">
@@ -148,6 +213,172 @@ export default function NewHome() {
               <div className="absolute -top-6 -right-6 w-32 h-32 bg-secondary/20 rounded-full blur-2xl" />
               <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-primary/20 rounded-full blur-2xl" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Live Matches Section */}
+      <section className="section bg-gradient-to-br from-accent/5 to-background">
+        <div className="container">
+          <div className="flex items-center justify-between mb-12">
+            <div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">Live Matches</h2>
+              <p className="text-muted-foreground text-lg">Join contests for ongoing matches</p>
+            </div>
+            <Link href="/matches">
+              <Button variant="outline" className="gap-2">
+                View All
+                <ArrowRight className="w-4 h-4" />
+              </Button>
+            </Link>
+          </div>
+
+          {isLoading ? (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[1, 2, 3].map((i) => (
+                <Card key={i} className="animate-pulse">
+                  <CardContent className="p-6">
+                    <div className="h-24 bg-muted rounded" />
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          ) : matches && matches.length > 0 ? (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {matches.slice(0, 3).map((match: any) => (
+                <Card key={match.id} className="hover:shadow-lg transition-all hover:scale-105 border-2 border-accent/20">
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <Badge className="bg-accent/10 text-accent">
+                        <Activity className="w-3 h-3 mr-1" />
+                        LIVE
+                      </Badge>
+                      <Badge variant="outline">{match.format || 'T20'}</Badge>
+                    </div>
+                    
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                          <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center font-bold text-primary">
+                            {match.teamA?.substring(0, 2).toUpperCase()}
+                          </div>
+                          <span className="font-semibold">{match.teamA}</span>
+                        </div>
+                        <span className="text-lg font-bold">{match.scoreA || '0/0'}</span>
+                      </div>
+                      
+                      <div className="flex items-center justify-center text-muted-foreground text-sm">
+                        vs
+                      </div>
+                      
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                          <div className="w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center font-bold text-secondary">
+                            {match.teamB?.substring(0, 2).toUpperCase()}
+                          </div>
+                          <span className="font-semibold">{match.teamB}</span>
+                        </div>
+                        <span className="text-lg font-bold">{match.scoreB || '0/0'}</span>
+                      </div>
+                    </div>
+
+                    <div className="mt-4 pt-4 border-t flex items-center justify-between text-sm text-muted-foreground">
+                      <div className="flex items-center gap-1">
+                        <MapPin className="w-4 h-4" />
+                        {match.venue || 'Stadium'}
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Users className="w-4 h-4" />
+                        {match.contestCount || 0} contests
+                      </div>
+                    </div>
+
+                    <Link href={`/matches/${match.id}`}>
+                      <Button className="w-full mt-4" variant="outline">
+                        View Details
+                      </Button>
+                    </Link>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          ) : (
+            <Card className="border-dashed">
+              <CardContent className="p-12 text-center">
+                <Activity className="w-16 h-16 mx-auto mb-4 text-muted-foreground opacity-50" />
+                <h3 className="text-xl font-semibold mb-2">No Live Matches</h3>
+                <p className="text-muted-foreground">Check back soon for live cricket action!</p>
+              </CardContent>
+            </Card>
+          )}
+        </div>
+      </section>
+
+      {/* Upcoming Matches Section */}
+      <section className="section bg-gradient-to-br from-primary/5 to-background">
+        <div className="container">
+          <div className="flex items-center justify-between mb-12">
+            <div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">Upcoming Matches</h2>
+              <p className="text-muted-foreground text-lg">Plan your fantasy teams in advance</p>
+            </div>
+            <Link href="/matches">
+              <Button variant="outline" className="gap-2">
+                View All
+                <ArrowRight className="w-4 h-4" />
+              </Button>
+            </Link>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[1, 2, 3, 4].map((i) => (
+              <Card key={i} className="hover:shadow-lg transition-all hover:scale-105 border-2 border-primary/20">
+                <CardContent className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <Badge className="bg-primary/10 text-primary">
+                      <Clock className="w-3 h-3 mr-1" />
+                      Upcoming
+                    </Badge>
+                    <Badge variant="outline">T20</Badge>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center font-bold text-primary">
+                        T{i}
+                      </div>
+                      <span className="font-semibold">Team {i}</span>
+                    </div>
+                    
+                    <div className="flex items-center justify-center text-muted-foreground text-sm">
+                      vs
+                    </div>
+                    
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center font-bold text-secondary">
+                        T{i + 4}
+                      </div>
+                      <span className="font-semibold">Team {i + 4}</span>
+                    </div>
+                  </div>
+
+                  <div className="mt-4 pt-4 border-t space-y-2 text-sm">
+                    <div className="flex items-center gap-2 text-muted-foreground">
+                      <Clock className="w-4 h-4" />
+                      <span>Starts in {i * 2}h</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-muted-foreground">
+                      <MapPin className="w-4 h-4" />
+                      <span>International Stadium</span>
+                    </div>
+                  </div>
+
+                  <Button className="w-full mt-4" size="sm">
+                    Create Team
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -600,40 +831,65 @@ export default function NewHome() {
         </section>
       )}
 
-      {/* Final CTA Section */}
-      <section className="section bg-gradient-to-br from-primary via-primary/90 to-secondary text-primary-foreground relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl" />
+      {/* Final CTA Section - Redesigned */}
+      <section className="section relative overflow-hidden">
+        {/* Animated Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-400 via-teal-500 to-cyan-600">
+          <div className="absolute inset-0 opacity-30">
+            <div className="absolute top-0 left-1/4 w-96 h-96 bg-yellow-400 rounded-full blur-3xl animate-pulse" />
+            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-orange-400 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-pink-400 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+          </div>
+        </div>
+
+        {/* Decorative Elements */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-10 left-10 w-20 h-20 border-4 border-white rounded-full" />
+          <div className="absolute top-20 right-20 w-16 h-16 border-4 border-white rounded-lg rotate-45" />
+          <div className="absolute bottom-20 left-1/3 w-24 h-24 border-4 border-white rounded-full" />
+          <div className="absolute bottom-10 right-1/4 w-12 h-12 border-4 border-white rounded-lg rotate-12" />
         </div>
 
         <div className="container relative text-center">
-          <div className="max-w-4xl mx-auto space-y-8">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black">
-              Ready to Master Fantasy Cricket?
+          <div className="max-w-5xl mx-auto space-y-10">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-6 py-3">
+              <Trophy className="w-5 h-5 text-white" />
+              <span className="text-white font-semibold">Join the Fantasy Cricket Revolution</span>
+            </div>
+
+            {/* Heading */}
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight">
+              Ready to Master{" "}
+              <span className="block mt-2 bg-gradient-to-r from-yellow-300 via-orange-300 to-pink-300 bg-clip-text text-transparent">
+                Fantasy Cricket?
+              </span>
             </h2>
-            <p className="text-xl md:text-2xl opacity-90">
+            
+            {/* Description */}
+            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
               Join thousands of learners who are improving their fantasy cricket skills every day. No payment required, just pure strategy and fun.
             </p>
 
-            <div className="flex flex-wrap gap-4 justify-center">
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap gap-4 justify-center pt-4">
               {user ? (
                 <Link href="/dashboard">
-                  <Button size="lg" className="bg-white text-primary hover:bg-white/90 px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105">
+                  <Button size="lg" className="bg-white text-emerald-600 hover:bg-white/90 px-10 py-7 text-lg font-bold rounded-full shadow-2xl hover:shadow-3xl transition-all hover:scale-105">
                     Go to Dashboard
-                    <ArrowRight className="ml-2 w-5 h-5" />
+                    <ArrowRight className="ml-2 w-6 h-6" />
                   </Button>
                 </Link>
               ) : (
                 <>
                   <Link href="/register">
-                    <Button size="lg" className="bg-white text-primary hover:bg-white/90 px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105">
+                    <Button size="lg" className="bg-white text-emerald-600 hover:bg-white/90 px-10 py-7 text-lg font-bold rounded-full shadow-2xl hover:shadow-3xl transition-all hover:scale-105">
                       Start Learning Free
-                      <ArrowRight className="ml-2 w-5 h-5" />
+                      <ArrowRight className="ml-2 w-6 h-6" />
                     </Button>
                   </Link>
                   <Link href="/about">
-                    <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-6 text-lg rounded-full transition-all">
+                    <Button size="lg" variant="outline" className="border-3 border-white bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-emerald-600 px-10 py-7 text-lg font-bold rounded-full transition-all">
                       Learn More
                     </Button>
                   </Link>
@@ -641,18 +897,22 @@ export default function NewHome() {
               )}
             </div>
 
-            <div className="grid sm:grid-cols-3 gap-8 pt-8">
-              <div className="space-y-2">
-                <div className="text-4xl font-black">100%</div>
-                <div className="text-lg opacity-90">Free Forever</div>
+            {/* Stats Cards */}
+            <div className="grid sm:grid-cols-3 gap-6 pt-12">
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all hover:scale-105">
+                <div className="text-5xl font-black text-white mb-2">100%</div>
+                <div className="text-lg text-white/90 font-semibold">Free Forever</div>
+                <p className="text-sm text-white/70 mt-2">No hidden charges, ever</p>
               </div>
-              <div className="space-y-2">
-                <div className="text-4xl font-black">18+</div>
-                <div className="text-lg opacity-90">Age Verified</div>
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all hover:scale-105">
+                <div className="text-5xl font-black text-white mb-2">18+</div>
+                <div className="text-lg text-white/90 font-semibold">Age Verified</div>
+                <p className="text-sm text-white/70 mt-2">Safe & compliant platform</p>
               </div>
-              <div className="space-y-2">
-                <div className="text-4xl font-black">24/7</div>
-                <div className="text-lg opacity-90">Support Available</div>
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all hover:scale-105">
+                <div className="text-5xl font-black text-white mb-2">24/7</div>
+                <div className="text-lg text-white/90 font-semibold">Support Available</div>
+                <p className="text-sm text-white/70 mt-2">We're here to help anytime</p>
               </div>
             </div>
           </div>
