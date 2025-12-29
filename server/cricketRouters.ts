@@ -40,6 +40,13 @@ export const cricketRouter = router({
     return await getAllMatches();
   }),
 
+  // Get current matches (live + upcoming) for homepage
+  getCurrentMatches: publicProcedure.query(async () => {
+    const live = await getLiveMatches();
+    const upcoming = await getUpcomingMatches();
+    return [...live, ...upcoming].slice(0, 6); // Return max 6 matches for homepage
+  }),
+
   // Get match by ID
   matchById: publicProcedure
     .input(z.object({ matchId: z.string() }))

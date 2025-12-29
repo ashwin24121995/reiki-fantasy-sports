@@ -205,7 +205,7 @@ export async function upsertMatchSquad(
           matchId,
           playerId: player.id,
           teamName: squad.teamName,
-          teamShortName: squad.shortName,
+          teamShortName: squad.shortName || squad.teamName.substring(0, 3).toUpperCase(), // Fallback if shortName is missing
         };
 
         await db.insert(matchSquads).values(squadRecord).onDuplicateKeyUpdate({

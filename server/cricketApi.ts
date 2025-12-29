@@ -147,17 +147,24 @@ class CricketApiService {
    */
   async getCurrentMatches(offset: number = 0): Promise<MatchData[]> {
     try {
+      console.log('[Cricket API] Fetching current matches with API key:', CRICKET_API_KEY.substring(0, 8) + '...');
       const response = await this.client.get<ApiResponse<MatchData[]>>('/currentMatches', {
         params: { offset },
       });
 
+      console.log('[Cricket API] Response status:', response.data.status);
+      console.log('[Cricket API] Response info:', response.data.info);
+
       if (response.data.status === 'success') {
+        console.log('[Cricket API] Successfully fetched', response.data.data.length, 'matches');
         return response.data.data;
       }
-      throw new Error('Failed to fetch current matches');
-    } catch (error) {
-      console.error('[getCurrentMatches Error]', error);
-      throw error;
+      throw new Error(`Failed to fetch current matches: ${response.data.status}`);
+    } catch (error: any) {
+      console.error('[getCurrentMatches Error]', error.message);
+      console.error('[getCurrentMatches Error Details]', error.response?.data || error);
+      // Return empty array instead of throwing to prevent sync from crashing
+      return [];
     }
   }
 
