@@ -13,18 +13,15 @@ import { trpc } from '@/lib/trpc';
 import { Trophy, Medal, Award, TrendingUp, ArrowLeft, Crown } from 'lucide-react';
 
 export default function Leaderboard() {
-  const [selectedMatch, setSelectedMatch] = useState<string | null>(null);
+  const [selectedContest, setSelectedContest] = useState<number | null>(null);
 
   // Fetch leaderboard data
-  const { data: leaderboardData, isLoading } = trpc.cricket.getLeaderboard.useQuery(
-    { matchId: selectedMatch },
-    { enabled: !!selectedMatch }
+  const { data: leaderboard, isLoading } = trpc.contests.leaderboard.useQuery(
+    { contestId: selectedContest! },
+    { enabled: !!selectedContest }
   );
 
-  const { data: matchesData } = trpc.cricket.getCurrentMatches.useQuery();
-
-  const matches = matchesData?.matches || [];
-  const leaderboard = leaderboardData?.leaderboard || [];
+  const { data: matches } = trpc.cricket.getCurrentMatches.useQuery();
 
   const getRankIcon = (rank: number) => {
     if (rank === 1) return <Crown className="h-5 w-5 text-yellow-500" />;
@@ -84,19 +81,19 @@ export default function Leaderboard() {
                 <CardTitle>Select Match</CardTitle>
               </CardHeader>
               <CardContent>
-                {matches.length === 0 ? (
+                {!matches || matches.length === 0 ? (
                   <p className="text-sm text-muted-foreground text-center py-4">
                     No matches available
                   </p>
                 ) : (
                   <div className="grid md:grid-cols-2 gap-4">
-                    {matches.map((match: any) => (
+                    {matches?.map((match: any) => (
                       <Card
                         key={match.id}
                         className={`cursor-pointer transition-colors ${
-                          selectedMatch === match.id ? 'border-primary bg-primary/5' : ''
+                          selectedContest === match.id ? 'border-primary bg-primary/5' : ''
                         }`}
-                        onClick={() => setSelectedMatch(match.id)}
+                        onClick={() => setSelectedContest(match.id)}
                       >
                         <CardContent className="p-4">
                           <div className="flex items-center justify-between mb-2">
@@ -115,7 +112,7 @@ export default function Leaderboard() {
             </Card>
 
             {/* Leaderboard */}
-            {selectedMatch && (
+            {selectedContest && (
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
@@ -129,7 +126,7 @@ export default function Leaderboard() {
                       <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-4"></div>
                       <p className="text-sm text-muted-foreground">Loading leaderboard...</p>
                     </div>
-                  ) : leaderboard.length === 0 ? (
+                  ) : !leaderboard || leaderboard.length === 0 ? (
                     <div className="text-center py-12">
                       <Trophy className="h-16 w-16 mx-auto mb-4 text-muted-foreground opacity-50" />
                       <h3 className="text-lg font-semibold mb-2">No Rankings Yet</h3>
@@ -142,7 +139,7 @@ export default function Leaderboard() {
                     </div>
                   ) : (
                     <div className="space-y-2">
-                      {leaderboard.map((entry: any, index: number) => {
+                      {leaderboard?.map((entry: any, index: number) => {
                         const rank = index + 1;
                         const isTopThree = rank <= 3;
 

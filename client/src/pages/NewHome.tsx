@@ -60,22 +60,42 @@ export default function NewHome() {
               </div>
 
               <div className="grid sm:grid-cols-2 gap-4">
-                {[
-                  { icon: CheckCircle2, title: "No Real Money", desc: "Pure skill-based learning", color: "primary" },
-                  { icon: CheckCircle2, title: "Real Cricket Data", desc: "Live scores & updates", color: "secondary" },
-                  { icon: CheckCircle2, title: "Fair Play Certified", desc: "Transparent scoring", color: "accent" },
-                  { icon: CheckCircle2, title: "Legal & Compliant", desc: "Age & state verified", color: "primary" }
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <div className={`p-2 rounded-lg bg-${item.color}/10`}>
-                      <item.icon className={`w-5 h-5 text-${item.color}`} />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold">{item.title}</h3>
-                      <p className="text-sm text-muted-foreground">{item.desc}</p>
-                    </div>
+                <div className="flex items-start gap-3">
+                  <div className="p-2 rounded-lg bg-primary/10">
+                    <CheckCircle2 className="w-5 h-5 text-primary" />
                   </div>
-                ))}
+                  <div>
+                    <h3 className="font-semibold">No Real Money</h3>
+                    <p className="text-sm text-muted-foreground">Pure skill-based learning</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="p-2 rounded-lg bg-secondary/10">
+                    <CheckCircle2 className="w-5 h-5 text-secondary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold">Real Cricket Data</h3>
+                    <p className="text-sm text-muted-foreground">Live scores & updates</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="p-2 rounded-lg bg-accent/10">
+                    <CheckCircle2 className="w-5 h-5 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold">Fair Play Certified</h3>
+                    <p className="text-sm text-muted-foreground">Transparent scoring</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="p-2 rounded-lg bg-primary/10">
+                    <CheckCircle2 className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold">Legal & Compliant</h3>
+                    <p className="text-sm text-muted-foreground">Age & state verified</p>
+                  </div>
+                </div>
               </div>
 
               <div className="flex flex-wrap gap-4">
@@ -94,26 +114,10 @@ export default function NewHome() {
                     </Button>
                   </Link>
                 )}
-                <Button size="lg" variant="outline" className="border-2 px-8 py-6 text-lg rounded-full hover:bg-primary hover:text-primary-foreground transition-all">
-                  <Play className="mr-2 w-5 h-5" />
-                  Watch Demo
-                </Button>
+
               </div>
 
-              <div className="flex flex-wrap gap-8 pt-4">
-                <div>
-                  <div className="text-3xl font-black gradient-text">10,000+</div>
-                  <div className="text-sm text-muted-foreground">Active Learners</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-black gradient-text">50,000+</div>
-                  <div className="text-sm text-muted-foreground">Teams Created</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-black gradient-text">1,000+</div>
-                  <div className="text-sm text-muted-foreground">Daily Contests</div>
-                </div>
-              </div>
+
             </div>
 
             <div className="relative animate-slide-in-right">
@@ -166,59 +170,84 @@ export default function NewHome() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                step: "01",
-                icon: Users,
-                title: "Create Account",
-                description: "Sign up for free with email. Verify your age (18+) and state. No credit card needed.",
-                color: "primary"
-              },
-              {
-                step: "02",
-                icon: Target,
-                title: "Select Match",
-                description: "Browse live and upcoming cricket matches. Choose from T20, ODI, and Test formats.",
-                color: "secondary"
-              },
-              {
-                step: "03",
-                icon: Trophy,
-                title: "Build Team",
-                description: "Select 11 players within credit budget. Choose captain (2x points) and vice-captain (1.5x points).",
-                color: "accent"
-              },
-              {
-                step: "04",
-                icon: TrendingUp,
-                title: "Join Contest",
-                description: "Enter free contests and compete. Watch live scores and climb the leaderboard.",
-                color: "primary"
-              }
-            ].map((item, index) => (
-              <Card key={index} className="relative group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50">
-                <CardHeader>
-                  <div className="flex items-start justify-between mb-4">
-                    <div className={`p-4 rounded-2xl bg-${item.color}/10 group-hover:scale-110 transition-transform`}>
-                      <item.icon className={`w-8 h-8 text-${item.color}`} />
-                    </div>
-                    <div className="text-6xl font-black text-muted/10 group-hover:text-primary/20 transition-colors">
-                      {item.step}
-                    </div>
+            <Card className="relative group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50">
+              <CardHeader>
+                <div className="flex items-start justify-between mb-4">
+                  <div className="p-4 rounded-2xl bg-primary/10 group-hover:scale-110 transition-transform">
+                    <Users className="w-8 h-8 text-primary" />
                   </div>
-                  <CardTitle className="text-xl">{item.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">
-                    {item.description}
-                  </CardDescription>
-                </CardContent>
-                
-                {index < 3 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-primary to-transparent" />
-                )}
-              </Card>
-            ))}
+                  <div className="text-6xl font-black text-muted/10 group-hover:text-primary/20 transition-colors">
+                    01
+                  </div>
+                </div>
+                <CardTitle className="text-xl">Create Account</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-base">
+                  Sign up for free with email. Verify your age (18+) and state. No credit card needed.
+                </CardDescription>
+              </CardContent>
+              <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-primary to-transparent" />
+            </Card>
+
+            <Card className="relative group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50">
+              <CardHeader>
+                <div className="flex items-start justify-between mb-4">
+                  <div className="p-4 rounded-2xl bg-secondary/10 group-hover:scale-110 transition-transform">
+                    <Target className="w-8 h-8 text-secondary" />
+                  </div>
+                  <div className="text-6xl font-black text-muted/10 group-hover:text-primary/20 transition-colors">
+                    02
+                  </div>
+                </div>
+                <CardTitle className="text-xl">Select Match</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-base">
+                  Browse live and upcoming cricket matches. Choose from T20, ODI, and Test formats.
+                </CardDescription>
+              </CardContent>
+              <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-primary to-transparent" />
+            </Card>
+
+            <Card className="relative group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50">
+              <CardHeader>
+                <div className="flex items-start justify-between mb-4">
+                  <div className="p-4 rounded-2xl bg-accent/10 group-hover:scale-110 transition-transform">
+                    <Trophy className="w-8 h-8 text-accent" />
+                  </div>
+                  <div className="text-6xl font-black text-muted/10 group-hover:text-primary/20 transition-colors">
+                    03
+                  </div>
+                </div>
+                <CardTitle className="text-xl">Build Team</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-base">
+                  Select 11 players within credit budget. Choose captain (2x points) and vice-captain (1.5x points).
+                </CardDescription>
+              </CardContent>
+              <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-primary to-transparent" />
+            </Card>
+
+            <Card className="relative group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50">
+              <CardHeader>
+                <div className="flex items-start justify-between mb-4">
+                  <div className="p-4 rounded-2xl bg-primary/10 group-hover:scale-110 transition-transform">
+                    <TrendingUp className="w-8 h-8 text-primary" />
+                  </div>
+                  <div className="text-6xl font-black text-muted/10 group-hover:text-primary/20 transition-colors">
+                    04
+                  </div>
+                </div>
+                <CardTitle className="text-xl">Join Contest</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-base">
+                  Enter free contests and compete. Watch live scores and climb the leaderboard.
+                </CardDescription>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

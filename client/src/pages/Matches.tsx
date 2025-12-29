@@ -19,7 +19,7 @@ export default function Matches() {
   // Fetch matches from API
   const { data: matchesData, isLoading, error } = trpc.cricket.getCurrentMatches.useQuery();
 
-  const matches = matchesData?.matches || [];
+  const matches = matchesData || [];
 
   // Filter matches by status
   const upcomingMatches = matches.filter(

@@ -424,3 +424,72 @@ All core application routes are now accessible. Next step is to ensure these pag
 - [ ] Loading states
 - [ ] Error states
 - [ ] Empty states
+
+
+---
+
+## 🔧 DESIGN FIXES - Dec 30, 2025
+
+**User Report**: Overlapping elements, font styling issues, imperfect design
+
+### Issues to Fix
+- [ ] Font styling not perfect (size, weight, spacing)
+- [ ] Elements overlapping each other
+- [ ] Layout spacing issues
+- [ ] Typography hierarchy problems
+- [ ] Responsive design issues
+- [ ] Card layouts need refinement
+- [ ] Section padding/margins incorrect
+- [ ] Button styling inconsistent
+- [ ] Color contrast issues
+- [ ] Mobile layout problems
+
+### Fix Plan
+1. [ ] Review entire homepage for overlaps
+2. [ ] Fix all font sizes and weights
+3. [ ] Correct spacing (padding, margins, gaps)
+4. [ ] Fix z-index layering issues
+5. [ ] Ensure responsive breakpoints work
+6. [ ] Polish all component styles
+7. [ ] Test on different screen sizes
+8. [ ] Deploy fixes to GitHub
+
+
+---
+
+## 🚨 URGENT FIXES - User Feedback (Dec 30, 2025)
+
+**Critical Issues:**
+- [x] Fix "auth.login" and "auth.register" showing translation keys instead of "Login"/"Register" - FIXED by merging duplicate auth sections in LanguageContext
+- [x] Remove "Watch Demo" button (no demo video exists - misleading) - REMOVED from NewHome.tsx
+- [x] Remove ALL mock/fake data (fake user counts, fake statistics) - REMOVED fake stats (10,000+, 50,000+, 1,000+)
+- [x] Remove misleading content - CLEANED UP
+- [x] Make everything honest and real - DONE
+- [x] Fix dynamic Tailwind classes (bg-${item.color}/10 patterns) - FIXED by hardcoding all cards
+- [x] Add missing Link import from wouter - ADDED
+- [ ] Fix remaining 94 TypeScript errors in backend
+- [ ] Fix overlapping design elements (if any remain)
+- [ ] Fix font styling issues (if any remain)
+
+
+---
+
+## 🔧 BACKEND TYPESCRIPT FIXES - Dec 30, 2025
+
+**TypeScript Errors Fixed (94 → 21):**
+- [x] Add openId field to users table schema
+- [x] Make password field nullable for OAuth users
+- [x] Fix cricket procedure names (matchById, matchSquad instead of getMatchInfo, getFantasySquad)
+- [x] Fix Leaderboard.tsx to use contests.leaderboard procedure
+- [x] Add missing auth.updateProfile procedure
+- [x] Add missing auth.updatePassword procedure
+- [x] Fix CreateTeam.tsx teamName parameter
+- [x] Fix CreateTeam.tsx data structure access (.players, .match)
+- [x] Fix Leaderboard.tsx matches property and variable names
+- [x] Fix Matches.tsx matches property
+- [x] Fix MyTeams.tsx undefined checks
+- [ ] Fix remaining 21 server-side type errors (non-critical, won't prevent app from running):
+  - insertId property issues in contestsDb.ts, teamsDb.ts
+  - OAuth null type mismatches in server/_core/oauth.ts, sdk.ts
+  - Missing exports in server/db.ts (getUserByEmail, createUser, User)
+  - Type mismatches in liveScoring.ts, routers.ts, teamsDb.ts

@@ -11,9 +11,10 @@ import { int, mysqlEnum, mysqlTable, text, timestamp, varchar, decimal, boolean,
 
 export const users = mysqlTable("users", {
   id: int("id").autoincrement().primaryKey(),
+  openId: varchar("openId", { length: 255 }).unique(), // For OAuth users
   name: text("name").notNull(),
   email: varchar("email", { length: 320 }).notNull().unique(),
-  password: varchar("password", { length: 255 }).notNull(), // Hashed password
+  password: varchar("password", { length: 255 }), // Hashed password (nullable for OAuth users)
   state: varchar("state", { length: 100 }), // User's state for geo-restriction
   ageVerified: boolean("ageVerified").default(false).notNull(), // 18+ verification
   role: mysqlEnum("role", ["user", "admin"]).default("user").notNull(),

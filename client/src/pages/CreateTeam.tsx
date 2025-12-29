@@ -55,12 +55,12 @@ export default function CreateTeam() {
   const [activeTab, setActiveTab] = useState<string>('all');
 
   // Fetch match details and squad
-  const { data: matchData, isLoading: matchLoading } = trpc.cricket.getMatchInfo.useQuery(
+  const { data: matchData, isLoading: matchLoading } = trpc.cricket.matchById.useQuery(
     { matchId: matchId! },
     { enabled: !!matchId }
   );
 
-  const { data: squadData, isLoading: squadLoading } = trpc.cricket.getFantasySquad.useQuery(
+  const { data: squadData, isLoading: squadLoading } = trpc.cricket.matchSquad.useQuery(
     { matchId: matchId! },
     { enabled: !!matchId }
   );
@@ -84,8 +84,13 @@ export default function CreateTeam() {
     return <div>Invalid match ID</div>;
   }
 
-  const players: Player[] = squadData?.players || [];
-  const match = matchData?.match;
+  const players: Player[] = squadData?.map((p: any) => ({
+    id: p.playerId,
+    name: p.player.name,
+    role: p.player.role as 'wk' | 'bat' | 'all' | 'bowl',
+    team: p.teamName,
+  })) || [];
+  const match = matchData;
 
   // Calculate team composition
   const composition: TeamComposition = selectedPlayers.reduce(
@@ -182,6 +187,7 @@ export default function CreateTeam() {
 
     saveTeamMutation.mutate({
       matchId: matchId!,
+      teamName: `Team ${Date.now()}`, // Auto-generate team name
       playerIds: selectedPlayers.map(p => p.id),
       captainId: captain!,
       viceCaptainId: viceCaptain!,

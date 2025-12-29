@@ -137,6 +137,97 @@ export const appRouter = router({
         success: true,
       } as const;
     }),
+
+    updateProfile: publicProcedure
+      .input(z.object({
+        name: z.string().min(2).optional(),
+        email: z.string().email().optional(),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        if (!ctx.user) {
+          throw new TRPCError({
+            code: "UNAUTHORIZED",
+            message: "You must be logged in to update your profile",
+          });
+        }
+
+        const db = await getDb();
+        if (!db) {
+          throw new TRPCError({
+            code: "INTERNAL_SERVER_ERROR",
+            message: "Database connection failed",
+          });
+        }
+
+        await db.update(users)
+          .set({
+            name: input.name,
+            email: input.email,
+            updatedAt: new Date(),
+          })
+          .where(eq(users.id, ctx.user.id));
+
+        return {
+          success: true,
+          message: "Profile updated successfully",
+        };
+      }),
+
+    updatePassword: publicProcedure
+      .input(z.object({
+        currentPassword: z.string().min(1),
+        newPassword: z.string().min(6, "Password must be at least 6 characters"),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        if (!ctx.user) {
+          throw new TRPCError({
+            code: "UNAUTHORIZED",
+            message: "You must be logged in to update your password",
+          });
+        }
+
+        const db = await getDb();
+        if (!db) {
+          throw new TRPCError({
+            code: "INTERNAL_SERVER_ERROR",
+            message: "Database connection failed",
+          });
+        }
+
+        // Get current user with password
+        const [user] = await db.select().from(users).where(eq(users.id, ctx.user.id)).limit(1);
+        if (!user || !user.password) {
+          throw new TRPCError({
+            code: "NOT_FOUND",
+            message: "User not found or password not set",
+          });
+        }
+
+        // Verify current password
+        const isValidPassword = await bcrypt.compare(input.currentPassword, user.password);
+        if (!isValidPassword) {
+          throw new TRPCError({
+            code: "UNAUTHORIZED",
+            message: "Current password is incorrect",
+          });
+        }
+
+        // Hash new password
+        const hashedPassword = await bcrypt.hash(input.newPassword, 10);
+
+        // Update password
+        await db.update(users)
+          .set({
+            password: hashedPassword,
+            updatedAt: new Date(),
+          })
+          .where(eq(users.id, ctx.user.id));
+
+        return {
+          success: true,
+          message: "Password updated successfully",
+        };
+      }),
   }),
 
   // TODO: add feature routers here, e.g.

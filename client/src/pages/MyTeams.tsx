@@ -91,7 +91,7 @@ export default function MyTeams() {
       {/* Content */}
       <section className="py-8">
         <div className="container mx-auto px-4">
-          {teams.length === 0 ? (
+          {!teams || teams.length === 0 ? (
             <div className="max-w-2xl mx-auto">
               <Card>
                 <CardContent className="pt-12 pb-12 text-center">
@@ -112,7 +112,7 @@ export default function MyTeams() {
             </div>
           ) : (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {teams.map((team: any) => (
+              {teams?.map((team: any) => (
                 <Card key={team.id} className="hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <div className="flex items-start justify-between mb-2">
