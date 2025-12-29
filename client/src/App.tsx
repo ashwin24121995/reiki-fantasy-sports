@@ -9,7 +9,7 @@ import { AuthProvider } from "./contexts/AuthContext";
 
 // Import redesigned pages
 import NewHome from "./pages/NewHome";
-import NewAbout from "./pages/NewAbout";
+import About from "./pages/About";
 import NewHowItWorks from "./pages/NewHowItWorks";
 import NewWhatWeDo from "./pages/NewWhatWeDo";
 import NewWhyFree from "./pages/NewWhyFree";
@@ -37,7 +37,7 @@ function Router() {
     <Switch>
       {/* Main Pages */}
       <Route path={"/"} component={NewHome} />
-      <Route path={"/about"} component={NewAbout} />
+      <Route path={"/about"} component={About} />
       <Route path={"/how-to-play"} component={NewHowItWorks} />
       <Route path={"/what-we-do"} component={NewWhatWeDo} />
       <Route path={"/why-free"} component={NewWhyFree} />
