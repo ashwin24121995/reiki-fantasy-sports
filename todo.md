@@ -1,0 +1,308 @@
+# REIKI ENERGY Fantasy Cricket Platform - COMPREHENSIVE TODO
+## Based on 37-Page PDF Development Guide
+
+---
+
+## 📋 PART 1: Project Setup, Core Configuration, and Base Styles
+- [x] Project initialization (already done with Manus template)
+- [x] Install dependencies (already done)
+- [x] Environment variables setup (DATABASE_URL, CRICKET_API_KEY, JWT_SECRET)
+- [x] Base styles and global CSS
+- [x] Root layout with metadata
+
+---
+
+## 📋 PART 2: Database Schema, ORM, and Initialization API
+- [x] Drizzle ORM configuration (drizzle.config.ts)
+- [x] Database schema definition (drizzle/schema.ts)
+  - [x] users table
+  - [x] user_teams table
+  - [x] team_players table
+  - [x] contests table
+  - [x] contest_entries table
+- [x] Database connection setup
+- [ ] Database initialization API endpoint
+- [ ] Generate and apply migrations
+
+---
+
+## 📋 PART 3: Authentication (Custom JWT) and User API
+- [x] Custom JWT authentication setup (adapted from NextAuth)
+- [x] User registration tRPC procedure
+- [x] User login tRPC procedure
+- [x] Login page UI
+- [x] Registration page UI
+- [x] Password hashing with bcrypt
+- [x] Session management with JWT cookies
+- [x] AuthContext for client-side auth state
+- [x] State validation (banned states)
+- [x] Age verification (18+)
+- [ ] Protected routes middleware
+
+---
+
+## 📋 PART 4: Cricket Data API Integration and Match Display
+- [ ] Cricket API library (src/lib/cricketApi.ts)
+  - [ ] getMatches() function
+  - [ ] getMatchSquad() function
+- [ ] CricScore API route
+- [ ] Match Squad API route
+- [ ] Match data caching (60-second revalidation)
+- [ ] Match filtering (live, upcoming, completed)
+
+---
+
+## 📋 PART 5: Core Application Pages (Homepage, Dashboard, Matches)
+- [ ] Header component with navigation
+- [ ] Homepage with hero section
+- [ ] Dashboard page (protected)
+  - [ ] User stats display
+  - [ ] Active teams list
+  - [ ] Upcoming matches
+- [ ] Matches list page
+  - [ ] Live matches section
+  - [ ] Upcoming matches section
+  - [ ] Completed matches section
+  - [ ] Match cards with team info
+- [ ] Match detail page
+  - [ ] Match info display
+  - [ ] Squad display
+  - [ ] "Create Team" button
+
+---
+
+## 📋 PART 6: Team Creation Flow (UI and API)
+- [ ] Player selection page
+  - [ ] Player list with roles (WK, BAT, AR, BOWL)
+  - [ ] Player credits system
+  - [ ] Player selection logic (11 players max)
+  - [ ] Captain and vice-captain selection
+  - [ ] Team preview
+- [ ] Team creation API
+  - [ ] Validate team composition
+  - [ ] Calculate total credits
+  - [ ] Save team to database
+- [ ] My Teams page
+  - [ ] List all user teams
+  - [ ] Edit team functionality
+  - [ ] Delete team functionality
+
+---
+
+## 📋 PART 7: Contest System (API, Pages, and Seeding)
+- [ ] Contest creation API (admin only)
+- [ ] Contest listing page
+  - [ ] Display all contests
+  - [ ] Filter by match
+  - [ ] Show entry fee and prize pool
+- [ ] Contest detail page
+  - [ ] Contest info
+  - [ ] Leaderboard
+  - [ ] Join contest button
+- [ ] Join contest API
+  - [ ] Validate user has team
+  - [ ] Check contest capacity
+  - [ ] Create contest entry
+- [ ] Contest seeding script
+  - [ ] Auto-create contests for upcoming matches
+
+---
+
+## 📋 PART 8: Live Score System and Automated Contest Sync
+- [ ] Live score fetching
+  - [ ] Cron job for score updates
+  - [ ] Update contest entries with points
+  - [ ] Calculate rankings
+- [ ] Leaderboard real-time updates
+- [ ] Contest status management
+  - [ ] Auto-close contests when match starts
+  - [ ] Auto-complete contests when match ends
+- [ ] Points calculation system
+  - [ ] Batting points
+  - [ ] Bowling points
+  - [ ] Fielding points
+  - [ ] Captain and vice-captain multipliers
+
+---
+
+## 📋 PART 9: Informational Pages and Final Touches
+- [ ] About Us page (detailed company info)
+  - [ ] What is REIKI ENERGY
+  - [ ] Mission and vision
+  - [ ] Why we're free
+  - [ ] Company registration details
+- [ ] How to Play page
+  - [ ] Step-by-step guide
+  - [ ] Rules and regulations
+  - [ ] Scoring system explanation
+- [ ] FAQ page (comprehensive Q&A)
+- [ ] Contact page
+- [ ] Terms & Conditions
+- [ ] Privacy Policy
+- [ ] Fair Play Policy
+- [ ] Responsible Gaming
+
+---
+
+## 📋 PART 10: Deployment and Final Verification
+- [ ] Environment variables verification
+- [ ] Database migration on production
+- [ ] Railway deployment
+- [ ] Custom domain setup (smartplaydrafts.com)
+- [ ] SSL certificate
+- [ ] Performance optimization
+- [ ] SEO optimization
+- [ ] Final testing
+  - [ ] Registration and login
+  - [ ] Team creation
+  - [ ] Contest joining
+  - [ ] Leaderboard display
+  - [ ] Mobile responsiveness
+
+---
+
+## 🎯 CURRENT PRIORITY (Based on PDF Guide)
+
+### IMMEDIATE TASKS (Week 1)
+1. **✅ Authentication System (COMPLETED)**
+   - [x] Implement custom JWT auth (NOT NextAuth - we're using custom)
+   - [x] Build registration form with state validation
+   - [x] Build login form
+   - [x] Add age verification (18+)
+   - [x] Validate banned states
+
+2. **Cricket API Integration**
+   - [ ] Test API with key: 1a822521-d7e0-46ff-98d3-3e51020863f3
+   - [ ] Fetch and display current matches
+   - [ ] Display match details
+   - [ ] Show player squads
+
+3. **Core Pages**
+   - [ ] Dashboard page
+   - [ ] Matches list page
+   - [ ] Match detail page
+
+### NEXT TASKS (Week 2)
+4. **Team Creation Flow**
+   - [ ] Player selection UI
+   - [ ] Team validation logic
+   - [ ] Save team API
+   - [ ] My Teams page
+
+5. **Contest System**
+   - [ ] Contest listing
+   - [ ] Join contest flow
+   - [ ] Leaderboard display
+
+### FINAL TASKS (Week 3)
+6. **Live Scores & Automation**
+   - [ ] Cron job for score updates
+   - [ ] Points calculation
+   - [ ] Auto-close/complete contests
+
+7. **Deployment**
+   - [ ] Push to GitHub
+   - [ ] Deploy to Railway
+   - [ ] Connect domain
+
+---
+
+## 📊 PROGRESS TRACKING
+
+**Overall Completion**: ~25%
+
+### ✅ Completed (25%)
+- Project setup and configuration
+- Database schema design (with auth fields)
+- Global Header/Footer components
+- Basic page structure
+- Environment variables
+- **Custom JWT Authentication System**
+- **Login and Registration pages**
+- **State validation and age verification**
+
+### 🔄 In Progress (5%)
+- Cricket API Integration (next)
+
+### ❌ Not Started (85%)
+- Authentication system (custom JWT)
+- Cricket API integration
+- Dashboard and core pages
+- Team creation flow
+- Contest system
+- Live score system
+- Informational pages (detailed content)
+- Deployment
+
+---
+
+## 📝 NOTES FROM PDF GUIDE
+
+1. **This is a Next.js guide** - Our project uses React + tRPC, so we need to adapt:
+   - Convert Next.js API routes to tRPC procedures
+   - Convert Next.js pages to React Router pages
+   - Use our existing auth system (custom JWT, not NextAuth)
+
+2. **Key Differences**:
+   - PDF uses: Next.js 14 + NextAuth + Drizzle + PlanetScale
+   - We use: React 19 + tRPC + Drizzle + Railway MySQL + Custom JWT
+
+3. **What to Keep from PDF**:
+   - Database schema structure
+   - Cricket API integration approach
+   - UI/UX design patterns
+   - Feature flow and logic
+   - Page structure and content
+
+4. **What to Adapt**:
+   - Convert all API routes to tRPC procedures
+   - Use our custom JWT auth instead of NextAuth
+   - Use React Router instead of Next.js routing
+   - Use our existing component library
+
+---
+
+## 🚀 NEXT STEPS
+
+1. Read through entire PDF to understand complete architecture
+2. Adapt authentication system to our custom JWT approach
+3. Integrate Cricket API and display matches
+4. Build team creation flow
+5. Implement contest system
+6. Add live score updates
+7. Complete all informational pages with detailed content
+8. Deploy to Railway
+
+---
+
+## ⚠️ IMPORTANT REMINDERS
+
+- **NO PRIZES**: This is educational only - make it clear everywhere
+- **18+ ONLY**: Strict age verification required
+- **STATE RESTRICTIONS**: Block AP, Assam, Nagaland, Odisha, Sikkim, Telangana
+- **FREE FOREVER**: No entry fees, no hidden costs
+- **LEGAL COMPLIANCE**: All policies must be clear and accessible
+
+
+---
+
+## 🔥 IMMEDIATE FIXES NEEDED (Before New Features)
+
+### Navigation Cleanup
+- [ ] Remove "How It Works" from header navigation
+- [ ] Remove "What We Do" from header navigation
+- [ ] Remove "Why Free" from header navigation
+- [ ] Keep only: Home, About Us, FAQ, Contact
+- [ ] Update Footer navigation to match
+
+### Homepage Simplification
+- [ ] Keep homepage simple with overview sections
+- [ ] Move detailed content to About Us page
+
+### About Us Page Enhancement
+- [ ] Add "What is REIKI ENERGY" detailed section
+- [ ] Add "Who is this for" detailed section
+- [ ] Add "Why we're different" detailed comparison
+- [ ] Add "Why we're free" detailed business model
+- [ ] Add mission, vision, values
+- [ ] Add company registration details
