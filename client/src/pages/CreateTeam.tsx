@@ -65,12 +65,12 @@ export default function CreateTeam() {
     { enabled: !!matchId }
   );
 
-  const saveTeamMutation = trpc.cricket.saveTeam.useMutation({
+  const saveTeamMutation = trpc.teams.createTeam.useMutation({
     onSuccess: () => {
       toast.success('Team saved successfully!');
       setLocation('/dashboard');
     },
-    onError: (error) => {
+    onError: (error: any) => {
       toast.error(`Failed to save team: ${error.message}`);
     },
   });

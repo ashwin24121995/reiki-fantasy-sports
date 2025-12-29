@@ -36,7 +36,6 @@ export default function Profile() {
   const [formData, setFormData] = useState({
     name: user?.name || '',
     email: user?.email || '',
-    phone: user?.phone || '',
   });
 
   const [passwordData, setPasswordData] = useState({
@@ -45,23 +44,23 @@ export default function Profile() {
     confirmPassword: '',
   });
 
-  const updateProfileMutation = trpc.customAuth.updateProfile.useMutation({
+  const updateProfileMutation = trpc.auth.updateProfile.useMutation({
     onSuccess: () => {
       toast.success('Profile updated successfully');
       setIsEditing(false);
     },
-    onError: (error) => {
+    onError: (error: any) => {
       toast.error(`Failed to update profile: ${error.message}`);
     },
   });
 
-  const updatePasswordMutation = trpc.customAuth.updatePassword.useMutation({
+  const updatePasswordMutation = trpc.auth.updatePassword.useMutation({
     onSuccess: () => {
       toast.success('Password updated successfully');
       setIsChangingPassword(false);
       setPasswordData({ currentPassword: '', newPassword: '', confirmPassword: '' });
     },
-    onError: (error) => {
+    onError: (error: any) => {
       toast.error(`Failed to update password: ${error.message}`);
     },
   });
@@ -202,46 +201,10 @@ export default function Profile() {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="phone">Phone</Label>
-                      {isEditing ? (
-                        <Input
-                          id="phone"
-                          value={formData.phone}
-                          onChange={e => setFormData({ ...formData, phone: e.target.value })}
-                        />
-                      ) : (
-                        <div className="flex items-center gap-2 p-3 bg-muted rounded-md">
-                          <Phone className="h-4 w-4 text-muted-foreground" />
-                          <span>{user.phone || 'Not provided'}</span>
-                        </div>
-                      )}
-                    </div>
-
-                    <div className="space-y-2">
                       <Label>State</Label>
                       <div className="flex items-center gap-2 p-3 bg-muted rounded-md">
                         <MapPin className="h-4 w-4 text-muted-foreground" />
                         <span>{user.state || 'Not provided'}</span>
-                      </div>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label>Date of Birth</Label>
-                      <div className="flex items-center gap-2 p-3 bg-muted rounded-md">
-                        <Calendar className="h-4 w-4 text-muted-foreground" />
-                        <span>
-                          {user.dateOfBirth
-                            ? format(new Date(user.dateOfBirth), 'PP')
-                            : 'Not provided'}
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label>Member Since</Label>
-                      <div className="flex items-center gap-2 p-3 bg-muted rounded-md">
-                        <Calendar className="h-4 w-4 text-muted-foreground" />
-                        <span>{format(new Date(user.createdAt), 'PP')}</span>
                       </div>
                     </div>
                   </div>

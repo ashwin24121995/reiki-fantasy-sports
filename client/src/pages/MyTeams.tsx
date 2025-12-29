@@ -26,24 +26,22 @@ export default function MyTeams() {
   const { user } = useAuth();
 
   // Fetch user's teams
-  const { data: teamsData, isLoading, refetch } = trpc.cricket.getMyTeams.useQuery(
+  const { data: teams, isLoading, refetch } = trpc.teams.myTeams.useQuery(
     undefined,
     { enabled: !!user }
   );
 
-  const deleteTeamMutation = trpc.cricket.deleteTeam.useMutation({
+  const deleteTeamMutation = trpc.teams.deleteTeam.useMutation({
     onSuccess: () => {
       toast.success('Team deleted successfully');
       refetch();
     },
-    onError: (error) => {
+    onError: (error: any) => {
       toast.error(`Failed to delete team: ${error.message}`);
     },
   });
 
-  const teams = teamsData?.teams || [];
-
-  const handleDeleteTeam = (teamId: string) => {
+  const handleDeleteTeam = (teamId: number) => {
     if (confirm('Are you sure you want to delete this team?')) {
       deleteTeamMutation.mutate({ teamId });
     }
