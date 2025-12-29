@@ -627,3 +627,25 @@ Section: Feature cards below hero (No Real Money, Real Cricket Data, Fair Play C
 - [ ] Test responsive design on all devices
 - [ ] Optimize performance
 - [ ] Save final checkpoint
+
+
+---
+
+## 🖼️ IMAGE OPTIMIZATION & LOGO UPDATE - Dec 30, 2025
+
+**User Request**: "now all image convert in webp, logo u already place then u ad name logo"
+
+### Tasks:
+- [x] Convert all cricket images to WebP format - 92% file size reduction!
+  - [x] cricket-stadium-1.jpg (6.9MB) → cricket-stadium-1.webp (694KB)
+  - [x] cricket-stadium-2.jpg (5.9MB) → cricket-stadium-2.webp (374KB)
+  - [x] cricket-action-1.jpg (5.9MB) → cricket-action-1.webp (332KB)
+  - [x] cricket-action-2.jpg (7.0MB) → cricket-action-2.webp (697KB)
+- [x] Generate new logo with "REIKI ENERGY" text integrated - logo-reiki-energy-full.webp
+- [x] Update all image references in code
+  - [x] NewHome.tsx carousel images - using .webp
+  - [x] Header.tsx logo - using logo-reiki-energy-full.webp
+- [x] Delete old JPG/PNG files - removed to save space
+- [x] Test all images load correctly - verified in browser
+- [x] Verify logo displays properly everywhere - working in header
+- [ ] Save checkpoint - NEXT

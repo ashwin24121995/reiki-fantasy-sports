@@ -89,13 +89,10 @@ export default function Header() {
           <Link href="/">
             <a className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <img
-                src="/logo-reiki-energy.png"
+                src="/logo-reiki-energy-full.webp"
                 alt="REIKI ENERGY"
-                className="h-12 w-auto object-contain"
+                className="h-10 w-auto object-contain"
               />
-              <span className="font-bold text-lg text-primary hidden sm:inline">
-                REIKI ENERGY
-              </span>
             </a>
           </Link>
 

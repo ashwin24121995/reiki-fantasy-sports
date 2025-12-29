@@ -19,10 +19,10 @@ export default function NewHome() {
   
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
   const carouselImages = [
-    '/cricket-stadium-1.jpg',
-    '/cricket-stadium-2.jpg',
-    '/cricket-action-1.jpg',
-    '/cricket-action-2.jpg'
+    '/cricket-stadium-1.webp',
+    '/cricket-stadium-2.webp',
+    '/cricket-action-1.webp',
+    '/cricket-action-2.webp',
   ];
 
   // Auto-play carousel
