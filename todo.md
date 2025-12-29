@@ -377,3 +377,50 @@ All core application routes are now accessible. Next step is to ensure these pag
 **Progress: 70% Complete**
 
 **Next: Part 9 - Informational Pages (Complete About Us, FAQ, Legal pages with full content)**
+
+
+---
+
+## 🎨 COMPLETE WEBSITE REDESIGN - Dec 30, 2025
+
+**User Request**: Fan Lite Play style - Dark theme, detailed sections, rich content
+**Reference**: Dark green/teal background, full-width sections, detailed explanations
+
+### Design System
+- [x] Create new color palette (emerald green + orange)
+- [x] Define typography system (headings, body, special fonts)
+- [x] Design spacing system (consistent margins, padding)
+- [x] Create component library (buttons, cards, sections)
+- [x] Define animation/transition system
+- [x] Update global CSS with new theme
+- [ ] Update to dark teal/green background theme
+- [ ] Add full-width section backgrounds
+- [ ] Create detailed content cards with images
+
+### Homepage Redesign
+- [ ] Fresh hero section (full-height, unique layout)
+- [ ] Features section (modern card design)
+- [ ] How it works (interactive/animated)
+- [ ] Live matches section (engaging layout)
+- [ ] Testimonials/social proof
+- [ ] Final CTA section
+
+### Informational Pages
+- [ ] About Us (storytelling layout)
+- [ ] FAQ (accordion/searchable)
+- [ ] Contact (modern form design)
+- [ ] Legal pages (readable, professional)
+
+### Application Pages
+- [ ] Dashboard (modern metrics, cards)
+- [ ] Matches list (grid/list view)
+- [ ] Team creation (step-by-step wizard)
+- [ ] Leaderboard (competitive design)
+- [ ] Profile (clean, editable)
+
+### Global Components
+- [ ] Header (sticky, modern nav)
+- [ ] Footer (comprehensive, organized)
+- [ ] Loading states
+- [ ] Error states
+- [ ] Empty states
