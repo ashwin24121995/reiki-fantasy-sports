@@ -47,13 +47,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Information */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center">
               <img
-                src="/logo.png"
+                src="/logo-reiki-energy-full.webp"
                 alt="REIKI ENERGY"
-                className="h-10 w-10 object-contain"
+                className="h-12 w-auto object-contain"
               />
-              <span className="font-bold text-lg text-primary">REIKI ENERGY</span>
             </div>
             <p className="text-sm text-muted-foreground">
               {t('footer.tagline')}

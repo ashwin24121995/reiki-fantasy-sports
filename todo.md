@@ -649,3 +649,14 @@ Section: Feature cards below hero (No Real Money, Real Cricket Data, Fair Play C
 - [x] Test all images load correctly - verified in browser
 - [x] Verify logo displays properly everywhere - working in header
 - [ ] Save checkpoint - NEXT
+
+
+---
+
+## 🔧 FOOTER LOGO UPDATE - Dec 30, 2025 ✅
+
+**User Report**: "why u didnt change the footer logo ?"
+
+- [x] Update Footer component to use logo-reiki-energy-full.webp
+- [x] Test footer logo displays correctly - Verified in browser
+- [ ] Save checkpoint - NEXT
