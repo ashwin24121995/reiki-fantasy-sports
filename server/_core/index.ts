@@ -8,6 +8,7 @@ import { appRouter } from "../routers";
 import { createContext } from "./context";
 import { serveStatic, setupVite } from "./vite";
 import { cricketSync } from "../cricketSync";
+import { liveScoringService } from "../liveScoring";
 
 function isPortAvailable(port: number): Promise<boolean> {
   return new Promise(resolve => {
@@ -64,6 +65,10 @@ async function startServer() {
     // Start Cricket API sync service
     console.log('[Server] Starting Cricket API sync service...');
     cricketSync.start();
+    
+    // Start Live Scoring service
+    console.log('[Server] Starting Live Scoring service...');
+    liveScoringService.start();
   });
 }
 

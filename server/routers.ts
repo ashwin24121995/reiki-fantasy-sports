@@ -5,6 +5,7 @@ import { publicProcedure, router } from "./_core/trpc";
 import { cricketRouter } from "./cricketRouters";
 import { teamsRouter } from "./teamsRouters";
 import { userRouter } from "./userRouters";
+import { contestsRouter } from "./contestsRouters";
 import { z } from "zod";
 import bcrypt from "bcryptjs";
 import { getDb } from "./db";
@@ -19,6 +20,7 @@ export const appRouter = router({
   cricket: cricketRouter,
   teams: teamsRouter,
   user: userRouter,
+  contests: contestsRouter,
   auth: router({
     me: publicProcedure.query(opts => opts.ctx.user),
     
