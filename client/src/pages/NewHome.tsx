@@ -47,7 +47,7 @@ export default function NewHome() {
               </div>
 
               <div className="space-y-4">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight">
                   Master Your{" "}
                   <span className="gradient-text">
                     Fantasy Cricket
