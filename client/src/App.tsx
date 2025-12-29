@@ -13,7 +13,7 @@ import About from "./pages/About";
 import NewHowItWorks from "./pages/NewHowItWorks";
 import NewWhatWeDo from "./pages/NewWhatWeDo";
 import NewWhyFree from "./pages/NewWhyFree";
-import NewFAQ from "./pages/NewFAQ";
+import FAQ from "./pages/FAQ";
 import NewContact from "./pages/NewContact";
 
 // Import legal pages
@@ -41,7 +41,7 @@ function Router() {
       <Route path={"/how-to-play"} component={NewHowItWorks} />
       <Route path={"/what-we-do"} component={NewWhatWeDo} />
       <Route path={"/why-free"} component={NewWhyFree} />
-      <Route path={"/faq"} component={NewFAQ} />
+      <Route path={"/faq"} component={FAQ} />
       <Route path={"/contact"} component={NewContact} />
       
       {/* Legal Pages */}

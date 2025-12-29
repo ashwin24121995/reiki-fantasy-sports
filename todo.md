@@ -688,3 +688,31 @@ Section: Feature cards below hero (No Real Money, Real Cricket Data, Fair Play C
 - [ ] Add call-to-action buttons
 - [ ] Test readability and clarity
 - [ ] Save checkpoint
+
+
+---
+
+## ❓ COMPREHENSIVE FAQ PAGE - Dec 30, 2025
+
+**User Request**: "Now make FAQ Page deep detailed"
+
+### FAQ Categories to Cover:
+- [ ] Getting Started (registration, account setup, age verification)
+- [ ] Platform Basics (what is fantasy cricket, how it works, rules)
+- [ ] Team Creation (player selection, credits, captain/vice-captain, editing)
+- [ ] Scoring System (points calculation, multipliers, live updates)
+- [ ] Contests (joining, types, leaderboards, rankings)
+- [ ] Legal & Compliance (why free, state restrictions, age requirements, data privacy)
+- [ ] Technical (browser support, mobile app, troubleshooting, performance)
+- [ ] Account Management (profile, settings, password, deletion)
+- [ ] Troubleshooting (common errors, support, contact)
+
+### Implementation:
+- [ ] Write 20+ detailed Q&A pairs (comprehensive answers)
+- [ ] Organize into collapsible accordion sections
+- [ ] Add search/filter functionality
+- [ ] Include helpful links to other pages
+- [ ] Add visual icons for categories
+- [ ] Make mobile-responsive
+- [ ] Test all accordions
+- [ ] Save checkpoint
