@@ -1300,3 +1300,11 @@ Section: Feature cards below hero (No Real Money, Real Cricket Data, Fair Play C
 - [ ] Verify Cricket API quota is sufficient
 - [ ] Set up monitoring for live scoring service
 - [ ] Create user guide/tutorial
+
+### Comprehensive Website Audit (Dec 30, 2025)
+- [x] Test all public pages before login (Home, About, FAQ, Contact, Matches, Contests, Legal pages)
+- [x] Test login/register flows
+- [ ] Test all authenticated pages after login (Dashboard, My Teams, Create Team, Contest Details) - REQUIRES USER LOGIN
+- [x] Document all issues found (see COMPREHENSIVE_AUDIT_REPORT.md)
+- [x] Fix all identified issues (NO CRITICAL ISSUES FOUND)
+- [x] Verify all fixes work correctly
