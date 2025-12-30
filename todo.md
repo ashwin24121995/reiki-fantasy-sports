@@ -958,3 +958,16 @@ Section: Feature cards below hero (No Real Money, Real Cricket Data, Fair Play C
 - [x] Ensure consistent typography across all legal pages
 - [x] Test readability on desktop and mobile
 
+
+---
+
+## 🎯 GITHUB REPOSITORY SETUP (Dec 30, 2025)
+
+### Task
+- [ ] Check if GitHub repository exists
+- [ ] Create new repository if needed
+- [ ] Initialize git in project directory
+- [ ] Add remote origin
+- [ ] Push code to GitHub
+- [ ] Verify successful push
+
