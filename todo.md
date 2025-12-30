@@ -971,3 +971,142 @@ Section: Feature cards below hero (No Real Money, Real Cricket Data, Fair Play C
 - [ ] Push code to GitHub
 - [ ] Verify successful push
 
+
+
+---
+
+## 🏏 REMAINING FANTASY CRICKET FEATURES (From PDF Guide)
+
+### Cricket API Integration Enhancements
+- [ ] Add CRIC_API_KEY environment variable documentation
+- [ ] Improve error handling for API failures
+- [ ] Add rate limiting protection
+- [ ] Create fallback mock data for development
+- [ ] Add API response caching
+
+### Team Creation Enhancements
+- [ ] Add player search functionality
+- [ ] Add player filters by role (WK/BAT/AR/BOWL)
+- [ ] Add player filters by team
+- [ ] Add player filters by price range
+- [ ] Show player recent form/stats
+- [ ] Add player comparison tool
+- [ ] Improve budget tracker visualization
+- [ ] Add team preview before saving
+- [ ] Add team validation messages
+
+### My Teams Page Enhancements
+- [ ] Add team duplication feature
+- [ ] Show which contests team is entered in
+- [ ] Add team performance history
+- [ ] Add team analytics/insights
+- [ ] Improve team edit UX
+- [ ] Add team sharing functionality
+
+### Contests System Implementation
+- [ ] Create Contests listing page for each match
+- [ ] Show contest details (entry fee, prize, spots)
+- [ ] Implement join contest flow
+- [ ] Show user's contest entries
+- [ ] Display prize distribution breakdown
+- [ ] Add contest filters
+- [ ] Show contest status indicators
+- [ ] Create admin contest creation (if needed)
+
+### Leaderboard Enhancements
+- [ ] Add real-time rank updates
+- [ ] Highlight current user position
+- [ ] Add pagination for large leaderboards
+- [ ] Show prize amounts for top positions
+- [ ] Add leaderboard filters
+- [ ] Show team details on click
+
+### Live Scores Page
+- [ ] Create dedicated Live Scores page
+- [ ] Display all live matches
+- [ ] Auto-refresh every 30 seconds
+- [ ] Show detailed scorecard
+- [ ] Add manual refresh button
+- [ ] Show ball-by-ball commentary (optional)
+- [ ] Link to related contests
+
+### Dashboard Enhancements
+- [ ] Add user statistics cards
+- [ ] Create recent activity feed
+- [ ] Add upcoming matches carousel
+- [ ] Show quick action buttons
+- [ ] Display achievement badges
+- [ ] Add performance charts
+- [ ] Show wallet/balance (if applicable)
+- [ ] Add recent contest results
+
+### Point Calculation System
+- [ ] Implement detailed scoring rules
+- [ ] Add batting points calculation
+- [ ] Add bowling points calculation
+- [ ] Add fielding points calculation
+- [ ] Apply captain multiplier (2x)
+- [ ] Apply vice-captain multiplier (1.5x)
+- [ ] Handle bonus points
+- [ ] Add point calculation transparency
+
+### Contest Sync & Automation
+- [ ] Auto-update contest status based on match
+- [ ] Trigger point calculation on match completion
+- [ ] Update rankings automatically
+- [ ] Handle edge cases (abandoned matches)
+- [ ] Add cron job support (optional)
+- [ ] Create admin sync trigger
+
+### Database Schema Additions
+- [ ] Verify all tables have proper indexes
+- [ ] Add match_players junction table if needed
+- [ ] Optimize queries for performance
+- [ ] Add database migration scripts
+- [ ] Document schema relationships
+
+### UI/UX Polish
+- [ ] Add loading skeletons everywhere
+- [ ] Implement error boundaries
+- [ ] Add toast notifications
+- [ ] Improve mobile responsiveness
+- [ ] Add empty states for all lists
+- [ ] Implement optimistic updates
+- [ ] Add confirmation dialogs
+- [ ] Polish animations and transitions
+
+
+---
+
+## 🚫 REMOVE ALL MONEY-RELATED FEATURES (100% FREE PLATFORM)
+
+### Database Schema Changes
+- [ ] Remove walletBalance from users table
+- [ ] Remove totalEarnings from users table
+- [ ] Remove entryFee from contests table (or set to always 0)
+- [ ] Remove prizePool from contests table (or set to always 0)
+- [ ] Remove prizeWon from leaderboards table
+- [ ] Remove entryFee from contestEntries table
+- [ ] Remove entire transactions table (not needed)
+- [ ] Update database migration
+
+### Backend Changes
+- [ ] Remove all wallet/balance logic from user procedures
+- [ ] Update contests to always be free (entryFee = 0)
+- [ ] Remove prize calculation logic
+- [ ] Remove transaction creation logic
+- [ ] Update leaderboard to show points only
+
+### Frontend Changes
+- [ ] Remove wallet/balance display from UI
+- [ ] Remove entry fee display from contests
+- [ ] Remove prize pool display from contests
+- [ ] Remove "Add Money" or "Withdraw" buttons
+- [ ] Update leaderboard to show only points/rank
+- [ ] Add "100% FREE" messaging everywhere
+- [ ] Update all copy to emphasize free-to-play
+
+### Documentation Updates
+- [ ] Update ENV_VARIABLES.md to remove payment-related vars
+- [ ] Update README to emphasize free platform
+- [ ] Update legal pages to reflect no-money policy
