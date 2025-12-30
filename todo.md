@@ -1352,3 +1352,10 @@ Section: Feature cards below hero (No Real Money, Real Cricket Data, Fair Play C
 - [x] Test registration flow end-to-end
 - [ ] Login with test account and test authenticated pages (Dashboard, My Teams, Create Team, Contest Details)
 
+
+### Critical Error Fixes (Dec 30, 2025)
+- [x] Fix database query error: matches table query failing (added try-catch to getAllMatches)
+- [x] Fix nested anchor tag error on homepage (used asChild prop on Button components)
+- [x] Run database migrations to ensure all tables exist
+- [x] Verify homepage renders without React warnings
+

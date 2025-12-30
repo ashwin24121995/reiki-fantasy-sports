@@ -132,11 +132,16 @@ export async function getCompletedMatches(limit: number = 20): Promise<Match[]> 
 }
 
 export async function getAllMatches(): Promise<Match[]> {
-  const db = await getDb();
-  if (!db) return [];
+  try {
+    const db = await getDb();
+    if (!db) return [];
 
-  const results = await db.select().from(matches).orderBy(desc(matches.dateTimeGMT));
-  return results.map(parseMatchJson);
+    const results = await db.select().from(matches).orderBy(desc(matches.dateTimeGMT));
+    return results.map(parseMatchJson);
+  } catch (error) {
+    console.error('[getAllMatches Error]', error);
+    return [];
+  }
 }
 
 // ============================================

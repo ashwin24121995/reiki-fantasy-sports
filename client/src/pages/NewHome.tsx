@@ -123,19 +123,19 @@ export default function NewHome() {
 
               <div className="flex flex-wrap gap-4">
                 {user ? (
-                  <Link href="/dashboard">
-                    <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105 w-full sm:w-auto">
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105 w-full sm:w-auto" asChild>
+                    <Link href="/dashboard">
                       Go to Dashboard
                       <ArrowRight className="ml-2 w-5 h-5" />
-                    </Button>
-                  </Link>
+                    </Link>
+                  </Button>
                 ) : (
-                  <Link href="/register">
-                    <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105 w-full sm:w-auto">
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105 w-full sm:w-auto" asChild>
+                    <Link href="/register">
                       Start Learning Free
                       <ArrowRight className="ml-2 w-5 h-5" />
-                    </Button>
-                  </Link>
+                    </Link>
+                  </Button>
                 )}
 
               </div>
