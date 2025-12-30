@@ -716,3 +716,71 @@ Section: Feature cards below hero (No Real Money, Real Cricket Data, Fair Play C
 - [ ] Make mobile-responsive
 - [ ] Test all accordions
 - [ ] Save checkpoint
+
+
+---
+
+## ⚖️ COMPREHENSIVE LEGAL PAGES - Dec 30, 2025
+
+**User Request**: "Terms & Conditions, Privacy Policy, Fair Play, Responsible Gaming"
+
+### Pages to Create:
+- [ ] Terms & Conditions
+  - [ ] Acceptance of terms
+  - [ ] User eligibility (18+, state restrictions)
+  - [ ] Account registration and security
+  - [ ] Platform usage rules
+  - [ ] Intellectual property rights
+  - [ ] Prohibited activities
+  - [ ] Disclaimer of warranties
+  - [ ] Limitation of liability
+  - [ ] Termination policy
+  - [ ] Governing law and dispute resolution
+  - [ ] Changes to terms
+  - [ ] Contact information
+
+- [ ] Privacy Policy
+  - [ ] Information we collect
+  - [ ] How we use information
+  - [ ] Data storage and security
+  - [ ] Third-party services
+  - [ ] Cookies and tracking
+  - [ ] User rights (access, deletion, correction)
+  - [ ] Data retention policy
+  - [ ] Children's privacy
+  - [ ] International data transfers
+  - [ ] Policy updates
+  - [ ] Contact for privacy concerns
+
+- [ ] Fair Play Policy
+  - [ ] Commitment to fair play
+  - [ ] Prohibited activities (cheating, collusion, bots)
+  - [ ] Account integrity rules
+  - [ ] Multiple accounts policy
+  - [ ] Detection and monitoring
+  - [ ] Penalties and consequences
+  - [ ] Appeal process
+  - [ ] Reporting violations
+
+- [ ] Responsible Gaming
+  - [ ] Educational platform statement
+  - [ ] No real money involved
+  - [ ] Age restrictions (18+)
+  - [ ] State restrictions
+  - [ ] Time management tips
+  - [ ] Healthy gaming habits
+  - [ ] Warning signs of problem behavior
+  - [ ] Support resources
+  - [ ] Parental guidance
+
+### Implementation:
+- [ ] Create TermsAndConditions.tsx page
+- [ ] Create PrivacyPolicy.tsx page
+- [ ] Create FairPlay.tsx page
+- [ ] Create ResponsibleGaming.tsx page
+- [ ] Add routes to App.tsx
+- [ ] Update Footer links to point to new pages
+- [ ] Ensure all pages are mobile responsive
+- [ ] Add "Last Updated" dates
+- [ ] Test all pages
+- [ ] Save checkpoint

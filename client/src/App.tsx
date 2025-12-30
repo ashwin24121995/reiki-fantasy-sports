@@ -17,8 +17,8 @@ import FAQ from "./pages/FAQ";
 import NewContact from "./pages/NewContact";
 
 // Import legal pages
-import Terms from "./pages/Terms";
-import Privacy from "./pages/Privacy";
+import TermsAndConditions from "./pages/TermsAndConditions";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import FairPlay from "./pages/FairPlay";
 import ResponsibleGaming from "./pages/ResponsibleGaming";
 
@@ -45,8 +45,8 @@ function Router() {
       <Route path={"/contact"} component={NewContact} />
       
       {/* Legal Pages */}
-      <Route path={"/terms"} component={Terms} />
-      <Route path={"/privacy"} component={Privacy} />
+      <Route path={"/terms"} component={TermsAndConditions} />
+      <Route path={"/privacy"} component={PrivacyPolicy} />
       <Route path={"/fair-play"} component={FairPlay} />
       <Route path={"/responsible-gaming"} component={ResponsibleGaming} />
       
