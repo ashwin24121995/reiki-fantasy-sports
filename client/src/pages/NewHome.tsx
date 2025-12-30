@@ -241,64 +241,81 @@ export default function NewHome() {
                 </Card>
               ))}
             </div>
-          ) : matches && matches.length > 0 ? (
+          ) : matches && matches.filter((m: any) => m.matchStarted && !m.matchEnded).length > 0 ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {matches.slice(0, 3).map((match: any) => (
-                <Card key={match.id} className="hover:shadow-lg transition-all hover:scale-105 border-2 border-accent/20">
-                  <CardContent className="p-6">
-                    <div className="flex items-center justify-between mb-4">
-                      <Badge className="bg-accent/10 text-accent">
-                        <Activity className="w-3 h-3 mr-1" />
-                        LIVE
-                      </Badge>
-                      <Badge variant="outline">{match.format || 'T20'}</Badge>
-                    </div>
-                    
-                    <div className="space-y-3">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center font-bold text-primary">
-                            {match.teamA?.substring(0, 2).toUpperCase()}
-                          </div>
-                          <span className="font-semibold">{match.teamA}</span>
-                        </div>
-                        <span className="text-lg font-bold">{match.scoreA || '0/0'}</span>
+              {matches.filter((m: any) => m.matchStarted && !m.matchEnded).slice(0, 3).map((match: any) => {
+                const teamInfo = typeof match.teamInfo === 'string' ? JSON.parse(match.teamInfo) : match.teamInfo;
+                const team1 = teamInfo?.[0] || {};
+                const team2 = teamInfo?.[1] || {};
+                const scores = typeof match.score === 'string' ? JSON.parse(match.score) : match.score;
+                const score1 = scores?.[0]?.r ? `${scores[0].r}/${scores[0].w} (${scores[0].o})` : '0/0';
+                const score2 = scores?.[1]?.r ? `${scores[1].r}/${scores[1].w} (${scores[1].o})` : '0/0';
+                
+                return (
+                  <Card key={match.id} className="hover:shadow-lg transition-all hover:scale-105 border-2 border-accent/20">
+                    <CardContent className="p-6">
+                      <div className="flex items-center justify-between mb-4">
+                        <Badge className="bg-accent/10 text-accent">
+                          <Activity className="w-3 h-3 mr-1" />
+                          LIVE
+                        </Badge>
+                        <Badge variant="outline">{match.matchType || 'T20'}</Badge>
                       </div>
                       
-                      <div className="flex items-center justify-center text-muted-foreground text-sm">
-                        vs
-                      </div>
-                      
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center font-bold text-secondary">
-                            {match.teamB?.substring(0, 2).toUpperCase()}
+                      <div className="space-y-3">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-3">
+                            <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center overflow-hidden">
+                              {team1.img ? (
+                                <img src={team1.img} alt={team1.name} className="w-full h-full object-cover" />
+                              ) : (
+                                <span className="font-bold text-primary text-xs">{team1.shortname || 'T1'}</span>
+                              )}
+                            </div>
+                            <span className="font-semibold text-sm">{team1.name || 'Team 1'}</span>
                           </div>
-                          <span className="font-semibold">{match.teamB}</span>
+                          <span className="text-lg font-bold">{score1}</span>
                         </div>
-                        <span className="text-lg font-bold">{match.scoreB || '0/0'}</span>
+                        
+                        <div className="flex items-center justify-center text-muted-foreground text-sm">
+                          vs
+                        </div>
+                        
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-3">
+                            <div className="w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center overflow-hidden">
+                              {team2.img ? (
+                                <img src={team2.img} alt={team2.name} className="w-full h-full object-cover" />
+                              ) : (
+                                <span className="font-bold text-secondary text-xs">{team2.shortname || 'T2'}</span>
+                              )}
+                            </div>
+                            <span className="font-semibold text-sm">{team2.name || 'Team 2'}</span>
+                          </div>
+                          <span className="text-lg font-bold">{score2}</span>
+                        </div>
                       </div>
-                    </div>
 
-                    <div className="mt-4 pt-4 border-t flex items-center justify-between text-sm text-muted-foreground">
-                      <div className="flex items-center gap-1">
-                        <MapPin className="w-4 h-4" />
-                        {match.venue || 'Stadium'}
+                      <div className="mt-4 pt-4 border-t flex items-center justify-between text-sm text-muted-foreground">
+                        <div className="flex items-center gap-1">
+                          <MapPin className="w-4 h-4" />
+                          <span className="truncate">{match.venue || 'Stadium'}</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Users className="w-4 h-4" />
+                          {match.contestCount || 0} contests
+                        </div>
                       </div>
-                      <div className="flex items-center gap-1">
-                        <Users className="w-4 h-4" />
-                        {match.contestCount || 0} contests
-                      </div>
-                    </div>
 
-                    <Link href={`/matches/${match.id}`}>
-                      <Button className="w-full mt-4" variant="outline">
-                        View Details
-                      </Button>
-                    </Link>
-                  </CardContent>
-                </Card>
-              ))}
+                      <Link href={`/matches/${match.id}`}>
+                        <Button className="w-full mt-4" variant="outline">
+                          View Details
+                        </Button>
+                      </Link>
+                    </CardContent>
+                  </Card>
+                );
+              })}
             </div>
           ) : (
             <Card className="border-dashed">
@@ -328,56 +345,85 @@ export default function NewHome() {
             </Link>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[1, 2, 3, 4].map((i) => (
-              <Card key={i} className="hover:shadow-lg transition-all hover:scale-105 border-2 border-primary/20">
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <Badge className="bg-primary/10 text-primary">
-                      <Clock className="w-3 h-3 mr-1" />
-                      Upcoming
-                    </Badge>
-                    <Badge variant="outline">T20</Badge>
-                  </div>
-                  
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center font-bold text-primary">
-                        T{i}
+          {matches && matches.filter((m: any) => !m.matchStarted).length > 0 ? (
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {matches.filter((m: any) => !m.matchStarted).slice(0, 4).map((match: any) => {
+                const teamInfo = typeof match.teamInfo === 'string' ? JSON.parse(match.teamInfo) : match.teamInfo;
+                const team1 = teamInfo?.[0] || {};
+                const team2 = teamInfo?.[1] || {};
+                const matchDate = new Date(match.dateTimeGMT);
+                const now = new Date();
+                const hoursUntil = Math.max(0, Math.round((matchDate.getTime() - now.getTime()) / (1000 * 60 * 60)));
+                
+                return (
+                  <Card key={match.id} className="hover:shadow-lg transition-all hover:scale-105 border-2 border-primary/20">
+                    <CardContent className="p-6">
+                      <div className="flex items-center justify-between mb-4">
+                        <Badge className="bg-primary/10 text-primary">
+                          <Clock className="w-3 h-3 mr-1" />
+                          Upcoming
+                        </Badge>
+                        <Badge variant="outline">{match.matchType || 'T20'}</Badge>
                       </div>
-                      <span className="font-semibold">Team {i}</span>
-                    </div>
-                    
-                    <div className="flex items-center justify-center text-muted-foreground text-sm">
-                      vs
-                    </div>
-                    
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center font-bold text-secondary">
-                        T{i + 4}
+                      
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-3">
+                          <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                            {team1.img ? (
+                              <img src={team1.img} alt={team1.name} className="w-8 h-8 rounded-full object-cover" />
+                            ) : (
+                              <span className="font-bold text-primary text-xs">{team1.shortname || 'T1'}</span>
+                            )}
+                          </div>
+                          <span className="font-semibold text-sm">{team1.name || 'Team 1'}</span>
+                        </div>
+                        
+                        <div className="flex items-center justify-center text-muted-foreground text-sm">
+                          vs
+                        </div>
+                        
+                        <div className="flex items-center gap-3">
+                          <div className="w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center">
+                            {team2.img ? (
+                              <img src={team2.img} alt={team2.name} className="w-8 h-8 rounded-full object-cover" />
+                            ) : (
+                              <span className="font-bold text-secondary text-xs">{team2.shortname || 'T2'}</span>
+                            )}
+                          </div>
+                          <span className="font-semibold text-sm">{team2.name || 'Team 2'}</span>
+                        </div>
                       </div>
-                      <span className="font-semibold">Team {i + 4}</span>
-                    </div>
-                  </div>
 
-                  <div className="mt-4 pt-4 border-t space-y-2 text-sm">
-                    <div className="flex items-center gap-2 text-muted-foreground">
-                      <Clock className="w-4 h-4" />
-                      <span>Starts in {i * 2}h</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-muted-foreground">
-                      <MapPin className="w-4 h-4" />
-                      <span>International Stadium</span>
-                    </div>
-                  </div>
+                      <div className="mt-4 pt-4 border-t space-y-2 text-sm">
+                        <div className="flex items-center gap-2 text-muted-foreground">
+                          <Clock className="w-4 h-4" />
+                          <span>{hoursUntil > 0 ? `Starts in ${hoursUntil}h` : 'Starting soon'}</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-muted-foreground">
+                          <MapPin className="w-4 h-4" />
+                          <span className="truncate">{match.venue || 'Stadium'}</span>
+                        </div>
+                      </div>
 
-                  <Button className="w-full mt-4" size="sm">
-                    Create Team
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                      <Link href={`/matches/${match.id}`}>
+                        <Button className="w-full mt-4" size="sm">
+                          Create Team
+                        </Button>
+                      </Link>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          ) : (
+            <Card className="border-dashed">
+              <CardContent className="p-12 text-center">
+                <Clock className="w-16 h-16 mx-auto mb-4 text-muted-foreground opacity-50" />
+                <h3 className="text-xl font-semibold mb-2">No Upcoming Matches</h3>
+                <p className="text-muted-foreground">Check back soon for new matches!</p>
+              </CardContent>
+            </Card>
+          )}
         </div>
       </section>
 

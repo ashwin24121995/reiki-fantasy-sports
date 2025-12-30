@@ -1165,3 +1165,34 @@ Section: Feature cards below hero (No Real Money, Real Cricket Data, Fair Play C
 - [x] Ensure completed matches are properly identified (24 matches displaying)
 - [x] Test all three tabs display correct matches
 - [x] Changed Matches.tsx to use trpc.cricket.allMatches.useQuery() instead of getCurrentMatches
+
+
+---
+
+## 🐛 BUG FIX: HOMEPAGE MATCH DATA NOT DISPLAYING
+
+### Upcoming Matches Section Issues
+- [x] Shows "Team 1, Team 2, Team 3..." instead of real team names - FIXED
+- [x] Shows "International Stadium" instead of real venues - FIXED
+- [x] Shows generic "Starts in 2h, 4h..." instead of actual match times - FIXED
+- [x] Displaying mock/placeholder data instead of Cricket API data - FIXED
+
+### Live Matches Section Issues
+- [x] Team names are missing (blank circles) - FIXED
+- [x] Team logos not displaying - FIXED (now shows team logos from Cricket API)
+- [x] Shows "0/0" scores instead of real live scores - FIXED (shows actual scores like 111/0)
+- [x] Team information not properly parsed/displayed - FIXED
+
+### Root Cause Investigation
+- [x] Check how homepage fetches match data
+- [x] Verify if getCurrentMatches returns real or mock data
+- [x] Check if teamInfo is being parsed correctly on homepage
+- [x] Verify score data structure and display logic
+- [x] Found: Upcoming section had hardcoded mock data loop, Live section used old field names (teamA/teamB instead of teamInfo array)
+
+### Fix Required
+- [x] Update homepage to properly display real team names from Cricket API
+- [x] Fix team logo display (parse teamInfo array, show team.img)
+- [x] Show actual live scores (parse score JSON array)
+- [x] Display real venue names and match times (calculate hours until match)
+- [x] Remove all mock/placeholder data (replaced hardcoded loop with real data filter)
