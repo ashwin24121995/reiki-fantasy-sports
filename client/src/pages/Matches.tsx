@@ -436,6 +436,10 @@ function MatchCard({ match, status }: { match: any; status: 'upcoming' | 'live' 
   const isUpcoming = status === 'upcoming';
   const isLive = status === 'live';
 
+  // Fetch contest count for this match
+  const { data: contests } = trpc.contests.byMatch.useQuery({ matchId: match.id });
+  const contestCount = contests?.length || 0;
+
   // Calculate time until match starts (for upcoming matches)
   const [timeUntil, setTimeUntil] = useState('');
 
@@ -541,11 +545,19 @@ function MatchCard({ match, status }: { match: any; status: 'upcoming' | 'live' 
               </div>
             )}
 
-            {/* Contest Count (placeholder - would come from backend) */}
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <Users className="h-4 w-4 flex-shrink-0" />
-              <span>0 contests available</span>
-            </div>
+            {/* Contest Count */}
+            <Link href="/contests" className="block">
+              <div className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors cursor-pointer group">
+                <Trophy className="h-4 w-4 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                <span className="font-medium">
+                  {contestCount > 0 ? (
+                    <span className="text-primary">{contestCount} contest{contestCount !== 1 ? 's' : ''} available</span>
+                  ) : (
+                    <span>No contests yet</span>
+                  )}
+                </span>
+              </div>
+            </Link>
 
             {/* Match Status */}
             {match.status && (

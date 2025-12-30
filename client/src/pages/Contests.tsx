@@ -14,11 +14,11 @@ export default function Contests() {
   
   // Fetch all matches to get contests for each
   const { data: matches, isLoading: matchesLoading } = trpc.cricket.allMatches.useQuery();
-  const seedContestsMutation = trpc.contests.seed.useMutation({
-    onSuccess: () => {
+  const seedContestsMutation = trpc.contests.seedAll.useMutation({
+    onSuccess: (data) => {
       toast({
         title: "Contests Created!",
-        description: "Free contests have been created for all matches.",
+        description: data.message || "Free contests have been created for all matches.",
       });
       // Refresh the page to show new contests
       window.location.reload();

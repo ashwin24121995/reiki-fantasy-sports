@@ -16,7 +16,7 @@ import {
   getLeaderboard,
   getUserRankInContest,
 } from "./contestsDb";
-import { getMatchById } from "./cricketDb";
+import { getMatchById, getAllMatches } from "./cricketDb";
 
 export const contestsRouter = router({
   /**
@@ -41,6 +41,60 @@ export const contestsRouter = router({
       }
       return contest;
     }),
+
+  /**
+   * Seed contests for ALL matches (bulk operation)
+   * Creates default free contests for all matches that don't have contests yet
+   */
+  seedAll: publicProcedure.mutation(async () => {
+    const allMatches = await getAllMatches();
+    let totalCreated = 0;
+    let totalSkipped = 0;
+    const errors = [];
+
+    for (const match of allMatches) {
+      try {
+        // Check if contests already exist
+        const existingContests = await getContestsByMatch(match.id);
+        if (existingContests.length > 0) {
+          totalSkipped++;
+          continue;
+        }
+
+        // Create 3 free contests with different sizes
+        const contestsToCreate = [
+          { name: "Mega Contest", maxEntries: 10000 },
+          { name: "Practice Contest", maxEntries: 1000 },
+          { name: "Beginner Contest", maxEntries: 100 },
+        ];
+
+        for (const contest of contestsToCreate) {
+          try {
+            await createContest(
+              match.id,
+              `${contest.name} - ${match.name}`,
+              contest.maxEntries,
+              1 // System user ID
+            );
+            totalCreated++;
+          } catch (error) {
+            console.error(`Failed to create ${contest.name} for match ${match.id}:`, error);
+          }
+        }
+      } catch (error) {
+        errors.push({ matchId: match.id, error: String(error) });
+      }
+    }
+
+    return {
+      success: true,
+      message: `Seeded ${totalCreated} contests across ${allMatches.length} matches (${totalSkipped} matches already had contests)`,
+      totalMatches: allMatches.length,
+      totalCreated,
+      totalSkipped,
+      errors: errors.length > 0 ? errors : undefined,
+    };
+  }),
 
   /**
    * Seed contests for a match (create default free contests)

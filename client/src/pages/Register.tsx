@@ -199,12 +199,13 @@ export default function Register() {
     setIsLoading(true);
 
     try {
-      const result = await register(
-        formData.name,
-        formData.email,
-        formData.password,
-        formData.state
-      );
+      const result = await register({
+        name: formData.name,
+        email: formData.email,
+        password: formData.password,
+        state: formData.state,
+        ageVerified: ageVerified
+      });
 
       if (result.success) {
         setSuccess('Registration successful! Redirecting to dashboard...');
