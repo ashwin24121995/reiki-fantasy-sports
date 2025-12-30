@@ -29,7 +29,7 @@ export default function FairPlay() {
           {/* Introduction */}
           <section className="mb-12">
             <div className="bg-green-50 p-6 rounded-lg border border-green-200">
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 text-lg leading-loose">
                 Fair play is the foundation of REIKI ENERGY. We believe that every user deserves an equal opportunity to learn, compete, and enjoy fantasy cricket without unfair advantages or manipulation. This Fair Play Policy explains what constitutes fair play, prohibited activities, and the consequences of violations.
               </p>
             </div>
@@ -39,9 +39,9 @@ export default function FairPlay() {
           <section className="mb-12">
             <div className="flex items-center gap-3 mb-4">
               <CheckCircle className="w-6 h-6 text-green-600" />
-              <h2 className="text-2xl font-bold text-gray-900">1. Our Commitment to Fair Play</h2>
+              <h2 className="text-3xl font-bold text-gray-900">1. Our Commitment to Fair Play</h2>
             </div>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 text-lg leading-loose">
               <p>
                 REIKI ENERGY is dedicated to providing a level playing field for all users. We achieve this through:
               </p>
@@ -70,9 +70,9 @@ export default function FairPlay() {
           <section className="mb-12">
             <div className="flex items-center gap-3 mb-4">
               <Ban className="w-6 h-6 text-red-600" />
-              <h2 className="text-2xl font-bold text-gray-900">2. Prohibited Activities</h2>
+              <h2 className="text-3xl font-bold text-gray-900">2. Prohibited Activities</h2>
             </div>
-            <div className="space-y-6 text-gray-700 leading-relaxed">
+            <div className="space-y-6 text-gray-700 text-lg leading-loose">
               <p>
                 The following activities are strictly prohibited and will result in penalties:
               </p>
@@ -172,9 +172,9 @@ export default function FairPlay() {
           <section className="mb-12">
             <div className="flex items-center gap-3 mb-4">
               <Eye className="w-6 h-6 text-green-600" />
-              <h2 className="text-2xl font-bold text-gray-900">3. Detection and Monitoring</h2>
+              <h2 className="text-3xl font-bold text-gray-900">3. Detection and Monitoring</h2>
             </div>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 text-lg leading-loose">
               <p>
                 We employ multiple methods to detect and prevent violations of this Fair Play Policy:
               </p>
@@ -213,9 +213,9 @@ export default function FairPlay() {
           <section className="mb-12">
             <div className="flex items-center gap-3 mb-4">
               <AlertTriangle className="w-6 h-6 text-amber-600" />
-              <h2 className="text-2xl font-bold text-gray-900">4. Penalties and Consequences</h2>
+              <h2 className="text-3xl font-bold text-gray-900">4. Penalties and Consequences</h2>
             </div>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 text-lg leading-loose">
               <p>
                 Violations of this Fair Play Policy will result in penalties proportionate to the severity and frequency of the violation:
               </p>
@@ -265,9 +265,9 @@ export default function FairPlay() {
           <section className="mb-12">
             <div className="flex items-center gap-3 mb-4">
               <Scale className="w-6 h-6 text-green-600" />
-              <h2 className="text-2xl font-bold text-gray-900">5. Appeal Process</h2>
+              <h2 className="text-3xl font-bold text-gray-900">5. Appeal Process</h2>
             </div>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 text-lg leading-loose">
               <p>
                 If you believe your account was suspended or banned in error, you have the right to appeal:
               </p>
@@ -303,9 +303,9 @@ export default function FairPlay() {
           <section className="mb-12">
             <div className="flex items-center gap-3 mb-4">
               <Flag className="w-6 h-6 text-green-600" />
-              <h2 className="text-2xl font-bold text-gray-900">6. Reporting Violations</h2>
+              <h2 className="text-3xl font-bold text-gray-900">6. Reporting Violations</h2>
             </div>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 text-lg leading-loose">
               <p>
                 We rely on our community to help maintain a fair environment. If you suspect another user is violating this Fair Play Policy, please report it:
               </p>
@@ -338,7 +338,7 @@ export default function FairPlay() {
           <section className="mb-0">
             <div className="flex items-center gap-3 mb-4">
               <Mail className="w-6 h-6 text-green-600" />
-              <h2 className="text-2xl font-bold text-gray-900">7. Contact Information</h2>
+              <h2 className="text-3xl font-bold text-gray-900">7. Contact Information</h2>
             </div>
             <div className="bg-green-50 p-6 rounded-lg border border-green-200">
               <p className="text-gray-700 mb-4">

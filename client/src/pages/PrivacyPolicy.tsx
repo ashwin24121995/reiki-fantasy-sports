@@ -29,7 +29,7 @@ export default function PrivacyPolicy() {
           {/* Introduction */}
           <section className="mb-12">
             <div className="bg-blue-50 p-6 rounded-lg border border-blue-200 mb-6">
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 text-lg leading-loose">
                 REIKI ENERGY GLOBAL PRIVATE LIMITED ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our fantasy cricket platform ("Platform"). By using the Platform, you consent to the data practices described in this policy.
               </p>
             </div>
@@ -39,9 +39,9 @@ export default function PrivacyPolicy() {
           <section className="mb-12">
             <div className="flex items-center gap-3 mb-4">
               <Database className="w-6 h-6 text-blue-600" />
-              <h2 className="text-2xl font-bold text-gray-900">1. Information We Collect</h2>
+              <h2 className="text-3xl font-bold text-gray-900">1. Information We Collect</h2>
             </div>
-            <div className="space-y-6 text-gray-700 leading-relaxed">
+            <div className="space-y-6 text-gray-700 text-lg leading-loose">
               
               <div>
                 <h3 className="font-bold text-lg text-gray-900 mb-3">A. Information You Provide Directly</h3>
@@ -90,9 +90,9 @@ export default function PrivacyPolicy() {
           <section className="mb-12">
             <div className="flex items-center gap-3 mb-4">
               <Eye className="w-6 h-6 text-blue-600" />
-              <h2 className="text-2xl font-bold text-gray-900">2. How We Use Your Information</h2>
+              <h2 className="text-3xl font-bold text-gray-900">2. How We Use Your Information</h2>
             </div>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 text-lg leading-loose">
               <p>We use the collected information for the following purposes:</p>
               
               <div className="grid md:grid-cols-2 gap-4">
@@ -146,9 +146,9 @@ export default function PrivacyPolicy() {
           <section className="mb-12">
             <div className="flex items-center gap-3 mb-4">
               <Lock className="w-6 h-6 text-blue-600" />
-              <h2 className="text-2xl font-bold text-gray-900">3. Data Storage and Security</h2>
+              <h2 className="text-3xl font-bold text-gray-900">3. Data Storage and Security</h2>
             </div>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 text-lg leading-loose">
               <p>
                 <strong>Data Storage:</strong> Your personal information is stored on secure servers provided by Railway (railway.app), a reputable cloud infrastructure provider. Our database uses MySQL with encryption at rest and in transit.
               </p>
@@ -175,8 +175,8 @@ export default function PrivacyPolicy() {
 
           {/* 4. Third-Party Services */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">4. Third-Party Services</h2>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">4. Third-Party Services</h2>
+            <div className="space-y-4 text-gray-700 text-lg leading-loose">
               <p>
                 We use the following third-party services to operate the Platform:
               </p>
@@ -204,9 +204,9 @@ export default function PrivacyPolicy() {
           <section className="mb-12">
             <div className="flex items-center gap-3 mb-4">
               <Cookie className="w-6 h-6 text-blue-600" />
-              <h2 className="text-2xl font-bold text-gray-900">5. Cookies and Tracking Technologies</h2>
+              <h2 className="text-3xl font-bold text-gray-900">5. Cookies and Tracking Technologies</h2>
             </div>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 text-lg leading-loose">
               <p>
                 We use cookies and similar tracking technologies to enhance your experience on the Platform.
               </p>
@@ -240,9 +240,9 @@ export default function PrivacyPolicy() {
           <section className="mb-12">
             <div className="flex items-center gap-3 mb-4">
               <UserCheck className="w-6 h-6 text-blue-600" />
-              <h2 className="text-2xl font-bold text-gray-900">6. Your Rights and Choices</h2>
+              <h2 className="text-3xl font-bold text-gray-900">6. Your Rights and Choices</h2>
             </div>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 text-lg leading-loose">
               <p>
                 You have the following rights regarding your personal information:
               </p>
@@ -285,8 +285,8 @@ export default function PrivacyPolicy() {
 
           {/* 7. Data Retention */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">7. Data Retention Policy</h2>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">7. Data Retention Policy</h2>
+            <div className="space-y-4 text-gray-700 text-lg leading-loose">
               <p>
                 We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law.
               </p>
@@ -305,7 +305,7 @@ export default function PrivacyPolicy() {
 
           {/* 8. Children's Privacy */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">8. Children's Privacy</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">8. Children's Privacy</h2>
             <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
               <p className="text-red-900 leading-relaxed">
                 <strong>18+ Only:</strong> REIKI ENERGY is strictly for users aged 18 and above. We do not knowingly collect personal information from anyone under 18 years of age. If we discover that we have collected information from a minor, we will delete it immediately. If you believe we have inadvertently collected information from a minor, please contact us at <a href="mailto:privacy@reikienergy.in" className="text-red-700 hover:underline">privacy@reikienergy.in</a>.
@@ -317,9 +317,9 @@ export default function PrivacyPolicy() {
           <section className="mb-12">
             <div className="flex items-center gap-3 mb-4">
               <Globe className="w-6 h-6 text-blue-600" />
-              <h2 className="text-2xl font-bold text-gray-900">9. International Data Transfers</h2>
+              <h2 className="text-3xl font-bold text-gray-900">9. International Data Transfers</h2>
             </div>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 text-lg leading-loose">
               <p>
                 <strong>Data Location:</strong> Your personal information is primarily stored on servers located in India. However, some third-party services we use (such as Railway) may store data on servers in other countries, including the United States and Europe.
               </p>
@@ -336,8 +336,8 @@ export default function PrivacyPolicy() {
 
           {/* 10. Changes to This Policy */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">10. Changes to This Privacy Policy</h2>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">10. Changes to This Privacy Policy</h2>
+            <div className="space-y-4 text-gray-700 text-lg leading-loose">
               <p>
                 We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. When we make changes, we will:
               </p>
@@ -356,7 +356,7 @@ export default function PrivacyPolicy() {
           <section className="mb-0">
             <div className="flex items-center gap-3 mb-4">
               <Mail className="w-6 h-6 text-blue-600" />
-              <h2 className="text-2xl font-bold text-gray-900">11. Contact Us</h2>
+              <h2 className="text-3xl font-bold text-gray-900">11. Contact Us</h2>
             </div>
             <div className="bg-blue-50 p-6 rounded-lg border border-blue-200">
               <p className="text-gray-700 mb-4">

@@ -29,7 +29,7 @@ export default function ResponsibleGaming() {
           {/* Introduction */}
           <section className="mb-12">
             <div className="bg-blue-50 p-6 rounded-lg border border-blue-200">
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 text-lg leading-loose">
                 REIKI ENERGY is a <strong>100% free educational platform</strong> designed to help users learn and improve their fantasy cricket skills. We do not involve any form of gambling, betting, or real money transactions. This Responsible Gaming Policy outlines our commitment to maintaining a safe, healthy, and educational environment for all users.
               </p>
             </div>
@@ -39,9 +39,9 @@ export default function ResponsibleGaming() {
           <section className="mb-12">
             <div className="flex items-center gap-3 mb-4">
               <BookOpen className="w-6 h-6 text-blue-600" />
-              <h2 className="text-2xl font-bold text-gray-900">1. Our Educational Mission</h2>
+              <h2 className="text-3xl font-bold text-gray-900">1. Our Educational Mission</h2>
             </div>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 text-lg leading-loose">
               <p>
                 REIKI ENERGY exists to provide a skill-based learning environment where users can:
               </p>
@@ -75,9 +75,9 @@ export default function ResponsibleGaming() {
           <section className="mb-12">
             <div className="flex items-center gap-3 mb-4">
               <Shield className="w-6 h-6 text-blue-600" />
-              <h2 className="text-2xl font-bold text-gray-900">2. Age Restrictions</h2>
+              <h2 className="text-3xl font-bold text-gray-900">2. Age Restrictions</h2>
             </div>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 text-lg leading-loose">
               <p>
                 To ensure a safe and appropriate environment, we enforce strict age restrictions:
               </p>
@@ -115,9 +115,9 @@ export default function ResponsibleGaming() {
           <section className="mb-12">
             <div className="flex items-center gap-3 mb-4">
               <AlertCircle className="w-6 h-6 text-red-600" />
-              <h2 className="text-2xl font-bold text-gray-900">3. State Restrictions</h2>
+              <h2 className="text-3xl font-bold text-gray-900">3. State Restrictions</h2>
             </div>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 text-lg leading-loose">
               <p>
                 Fantasy sports are regulated differently across Indian states. To ensure legal compliance, REIKI ENERGY is <strong>not available</strong> to residents of the following states:
               </p>
@@ -147,9 +147,9 @@ export default function ResponsibleGaming() {
           <section className="mb-12">
             <div className="flex items-center gap-3 mb-4">
               <Heart className="w-6 h-6 text-pink-600" />
-              <h2 className="text-2xl font-bold text-gray-900">4. Healthy Gaming Practices</h2>
+              <h2 className="text-3xl font-bold text-gray-900">4. Healthy Gaming Practices</h2>
             </div>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 text-lg leading-loose">
               <p>
                 Even though REIKI ENERGY is free and educational, we encourage all users to maintain healthy gaming habits:
               </p>
@@ -192,9 +192,9 @@ export default function ResponsibleGaming() {
           <section className="mb-12">
             <div className="flex items-center gap-3 mb-4">
               <AlertCircle className="w-6 h-6 text-amber-600" />
-              <h2 className="text-2xl font-bold text-gray-900">5. Warning Signs of Unhealthy Behavior</h2>
+              <h2 className="text-3xl font-bold text-gray-900">5. Warning Signs of Unhealthy Behavior</h2>
             </div>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 text-lg leading-loose">
               <p>
                 Even on a free platform, it's possible to develop unhealthy habits. Watch for these warning signs:
               </p>
@@ -238,9 +238,9 @@ export default function ResponsibleGaming() {
           <section className="mb-12">
             <div className="flex items-center gap-3 mb-4">
               <Shield className="w-6 h-6 text-blue-600" />
-              <h2 className="text-2xl font-bold text-gray-900">6. Self-Exclusion Options</h2>
+              <h2 className="text-3xl font-bold text-gray-900">6. Self-Exclusion Options</h2>
             </div>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 text-lg leading-loose">
               <p>
                 If you feel you need a break from REIKI ENERGY, we offer self-exclusion options:
               </p>
@@ -271,9 +271,9 @@ export default function ResponsibleGaming() {
           <section className="mb-12">
             <div className="flex items-center gap-3 mb-4">
               <Users className="w-6 h-6 text-blue-600" />
-              <h2 className="text-2xl font-bold text-gray-900">7. Support Resources</h2>
+              <h2 className="text-3xl font-bold text-gray-900">7. Support Resources</h2>
             </div>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 text-lg leading-loose">
               <p>
                 If you or someone you know is struggling with gaming-related issues, these resources can help:
               </p>
@@ -317,9 +317,9 @@ export default function ResponsibleGaming() {
           <section className="mb-12">
             <div className="flex items-center gap-3 mb-4">
               <Users className="w-6 h-6 text-blue-600" />
-              <h2 className="text-2xl font-bold text-gray-900">8. Parents & Guardians</h2>
+              <h2 className="text-3xl font-bold text-gray-900">8. Parents & Guardians</h2>
             </div>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 text-lg leading-loose">
               <p>
                 If you're a parent or guardian concerned about a young adult's use of REIKI ENERGY:
               </p>
@@ -350,7 +350,7 @@ export default function ResponsibleGaming() {
           <section className="mb-0">
             <div className="flex items-center gap-3 mb-4">
               <Mail className="w-6 h-6 text-blue-600" />
-              <h2 className="text-2xl font-bold text-gray-900">9. Contact Information</h2>
+              <h2 className="text-3xl font-bold text-gray-900">9. Contact Information</h2>
             </div>
             <div className="bg-blue-50 p-6 rounded-lg border border-blue-200">
               <p className="text-gray-700 mb-4">

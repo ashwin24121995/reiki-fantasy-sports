@@ -939,3 +939,22 @@ Section: Feature cards below hero (No Real Money, Real Cricket Data, Fair Play C
 - [x] Remove duplicate Header/Footer from individual pages
 - [x] Test all pages to verify global layout works
 
+
+---
+
+## 🎯 LEGAL PAGES FONT STYLING FIX (Dec 30, 2025)
+
+### Issue
+- [x] Terms & Conditions page has poor font styling
+- [x] Privacy Policy page has poor font styling
+- [x] Fair Play page has poor font styling
+- [x] Responsible Gaming page has poor font styling
+- [x] Need better typography, spacing, and readability
+
+### Solution
+- [x] Fix font sizes and line heights (increased to text-lg with leading-loose)
+- [x] Improve heading hierarchy (h2 increased from text-2xl to text-3xl)
+- [x] Add proper spacing between sections (space-y-4 to space-y-6)
+- [x] Ensure consistent typography across all legal pages
+- [x] Test readability on desktop and mobile
+
