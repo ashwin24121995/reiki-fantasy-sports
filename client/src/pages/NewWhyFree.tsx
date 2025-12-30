@@ -7,13 +7,11 @@ import { Heart, DollarSign, Users, TrendingUp, Shield, CheckCircle, XCircle, Hel
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 
 export default function NewWhyFree() {
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      
 
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-primary/10 via-blue-500/10 to-primary/5">
@@ -380,7 +378,7 @@ export default function NewWhyFree() {
         </div>
       </section>
 
-      <Footer />
+      
     </div>
   );
 }

@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "wouter";
 import { useAuth } from "@/contexts/AuthContext";
 import { trpc } from "@/lib/trpc";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -43,7 +41,7 @@ export default function NewHome() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      
       
       {/* Hero Section - Full Height */}
       <section className="section-full relative overflow-hidden">
@@ -919,7 +917,7 @@ export default function NewHome() {
         </div>
       </section>
 
-      <Footer />
+      
     </div>
   );
 }

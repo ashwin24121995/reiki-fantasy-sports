@@ -923,3 +923,19 @@ Section: Feature cards below hero (No Real Money, Real Cricket Data, Fair Play C
 - [x] Add smooth animations for filter changes
 - [x] Implement "No results" state with helpful message
 
+
+---
+
+## 🎯 GLOBAL HEADER/FOOTER FIX (Dec 30, 2025)
+
+### Issue
+- [x] Header and Footer only appear on homepage
+- [x] Other pages (Matches, Dashboard, etc.) missing navigation
+- [x] Need consistent branding across all pages
+
+### Solution
+- [x] Move Header component to App.tsx global layout
+- [x] Move Footer component to App.tsx global layout
+- [x] Remove duplicate Header/Footer from individual pages
+- [x] Test all pages to verify global layout works
+

@@ -6,13 +6,11 @@
 import { Trophy, Users, TrendingUp, Shield, Database, Zap, BookOpen, Lock, Globe, CheckCircle } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 
 export default function NewWhatWeDo() {
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      
 
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-primary/10 via-blue-500/10 to-primary/5">
@@ -415,7 +413,7 @@ export default function NewWhatWeDo() {
         </div>
       </section>
 
-      <Footer />
+      
     </div>
   );
 }

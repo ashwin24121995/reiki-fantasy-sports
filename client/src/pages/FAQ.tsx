@@ -19,8 +19,6 @@ import {
   Shield, Settings, Smartphone, AlertCircle, MessageCircle,
   FileText, Lock
 } from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 
 export default function FAQ() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -294,7 +292,7 @@ export default function FAQ() {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      <Header />
+      
 
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-br from-emerald-500/10 via-teal-500/10 to-cyan-500/10">
@@ -407,7 +405,7 @@ export default function FAQ() {
         </div>
       </section>
 
-      <Footer />
+      
     </div>
   );
 }

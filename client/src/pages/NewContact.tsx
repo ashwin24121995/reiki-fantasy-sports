@@ -11,8 +11,6 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { toast } from 'sonner';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 
 export default function NewContact() {
   const [formData, setFormData] = useState({
@@ -46,7 +44,7 @@ export default function NewContact() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      
 
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-primary/10 via-blue-500/10 to-primary/5">
@@ -287,7 +285,7 @@ export default function NewContact() {
         </div>
       </section>
 
-      <Footer />
+      
     </div>
   );
 }

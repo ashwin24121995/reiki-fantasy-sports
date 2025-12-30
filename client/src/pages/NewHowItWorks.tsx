@@ -10,15 +10,13 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
 import { useAuth } from '@/contexts/AuthContext';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 
 export default function NewHowItWorks() {
   const { isAuthenticated } = useAuth();
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      
 
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-primary/10 via-blue-500/10 to-primary/5">
@@ -453,7 +451,7 @@ export default function NewHowItWorks() {
         </div>
       </section>
 
-      <Footer />
+      
     </div>
   );
 }

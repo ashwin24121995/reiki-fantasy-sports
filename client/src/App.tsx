@@ -6,6 +6,8 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { AuthProvider } from "./contexts/AuthContext";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 // Import redesigned pages
 import NewHome from "./pages/NewHome";
@@ -76,8 +78,19 @@ function App() {
         <LanguageProvider>
           <AuthProvider>
             <TooltipProvider>
+              <div className="flex flex-col min-h-screen">
+                {/* Global Header */}
+                <Header />
+                
+                {/* Main Content */}
+                <main className="flex-1">
+                  <Router />
+                </main>
+                
+                {/* Global Footer */}
+                <Footer />
+              </div>
               <Toaster />
-              <Router />
             </TooltipProvider>
           </AuthProvider>
         </LanguageProvider>
