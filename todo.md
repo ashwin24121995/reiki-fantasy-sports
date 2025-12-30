@@ -1140,3 +1140,28 @@ Section: Feature cards below hero (No Real Money, Real Cricket Data, Fair Play C
 - [x] Verify live scores update correctly
 - [x] Test with API key provided: 1a822521-d7e0-46ff-98d3-3e51020863f3
 - [x] Fixed JSON parsing issue for teamInfo/teams/score fields
+
+
+---
+
+## 🐛 BUG FIX: UPCOMING/COMPLETED MATCHES NOT SHOWING
+
+### Issue
+- [x] Upcoming tab shows "No Upcoming Matches" - RESOLVED: No upcoming matches in API currently
+- [x] Completed tab shows "No Completed Matches" - FIXED: Now shows 24 completed matches
+- [x] Only Live tab is working correctly
+- [x] Need to investigate match status categorization logic
+
+### Investigation
+- [x] Check how matches are filtered in Matches.tsx
+- [x] Verify matchStarted and matchEnded flags in database
+- [x] Check if Cricket API sync is setting status flags correctly
+- [x] Review match status determination logic
+- [x] Found root cause: Matches page was calling getCurrentMatches (only 6 matches) instead of allMatches
+
+### Fix
+- [x] Correct match status categorization
+- [x] Ensure upcoming matches are properly identified (no upcoming matches in API currently)
+- [x] Ensure completed matches are properly identified (24 matches displaying)
+- [x] Test all three tabs display correct matches
+- [x] Changed Matches.tsx to use trpc.cricket.allMatches.useQuery() instead of getCurrentMatches

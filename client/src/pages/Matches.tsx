@@ -48,8 +48,8 @@ export default function Matches() {
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
 
-  // Fetch matches from API
-  const { data: matchesData, isLoading, error } = trpc.cricket.getCurrentMatches.useQuery();
+  // Fetch all matches from API (upcoming, live, completed)
+  const { data: matchesData, isLoading, error } = trpc.cricket.allMatches.useQuery();
 
   const matches = matchesData || [];
 
