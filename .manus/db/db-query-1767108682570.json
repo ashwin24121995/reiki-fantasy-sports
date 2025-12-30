@@ -1,0 +1,26 @@
+{
+  "query": "SELECT \n  'Total' as category, COUNT(*) as count FROM matches\nUNION ALL\nSELECT 'Upcoming', COUNT(*) FROM matches WHERE matchStarted = 0 AND matchEnded = 0\nUNION ALL\nSELECT 'Live', COUNT(*) FROM matches WHERE matchStarted = 1 AND matchEnded = 0\nUNION ALL\nSELECT 'Completed', COUNT(*) FROM matches WHERE matchEnded = 1;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2EKhjpwgmHfHvW4.4164de301b73 --database aHKMyW7q8Yzq4ixgg6hEiM --execute SELECT \n  'Total' as category, COUNT(*) as count FROM matches\nUNION ALL\nSELECT 'Upcoming', COUNT(*) FROM matches WHERE matchStarted = 0 AND matchEnded = 0\nUNION ALL\nSELECT 'Live', COUNT(*) FROM matches WHERE matchStarted = 1 AND matchEnded = 0\nUNION ALL\nSELECT 'Completed', COUNT(*) FROM matches WHERE matchEnded = 1;",
+  "rows": [
+    {
+      "category": "Upcoming",
+      "count": "0"
+    },
+    {
+      "category": "Total",
+      "count": "26"
+    },
+    {
+      "category": "Live",
+      "count": "2"
+    },
+    {
+      "category": "Completed",
+      "count": "24"
+    }
+  ],
+  "messages": [],
+  "stdout": "category\tcount\nUpcoming\t0\nTotal\t26\nLive\t2\nCompleted\t24\n",
+  "stderr": "",
+  "execution_time_ms": 1554
+}

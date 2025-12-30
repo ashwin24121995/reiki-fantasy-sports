@@ -1,0 +1,16 @@
+{
+  "query": "SELECT \n  COUNT(*) as total,\n  SUM(CASE WHEN matchStarted = 0 AND matchEnded = 0 THEN 1 ELSE 0 END) as upcoming,\n  SUM(CASE WHEN matchStarted = 1 AND matchEnded = 0 THEN 1 ELSE 0 END) as live,\n  SUM(CASE WHEN matchEnded = 1 THEN 1 ELSE 0 END) as completed\nFROM matches;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2EKhjpwgmHfHvW4.4164de301b73 --database aHKMyW7q8Yzq4ixgg6hEiM --execute SELECT \n  COUNT(*) as total,\n  SUM(CASE WHEN matchStarted = 0 AND matchEnded = 0 THEN 1 ELSE 0 END) as upcoming,\n  SUM(CASE WHEN matchStarted = 1 AND matchEnded = 0 THEN 1 ELSE 0 END) as live,\n  SUM(CASE WHEN matchEnded = 1 THEN 1 ELSE 0 END) as completed\nFROM matches;",
+  "rows": [
+    {
+      "total": "26",
+      "upcoming": "0",
+      "live": "2",
+      "completed": "24"
+    }
+  ],
+  "messages": [],
+  "stdout": "total\tupcoming\tlive\tcompleted\n26\t0\t2\t24\n",
+  "stderr": "",
+  "execution_time_ms": 1537
+}

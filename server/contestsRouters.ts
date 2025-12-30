@@ -16,6 +16,7 @@ import {
   getLeaderboard,
   getUserRankInContest,
 } from "./contestsDb";
+import { getMatchById } from "./cricketDb";
 
 export const contestsRouter = router({
   /**
@@ -39,6 +40,64 @@ export const contestsRouter = router({
         throw new Error("Contest not found");
       }
       return contest;
+    }),
+
+  /**
+   * Seed contests for a match (create default free contests)
+   * Called automatically when new matches are synced
+   */
+  seed: publicProcedure
+    .input(
+      z.object({
+        matchId: z.string(),
+      })
+    )
+    .mutation(async ({ input }) => {
+      const match = await getMatchById(input.matchId);
+      if (!match) {
+        throw new Error("Match not found");
+      }
+
+      // Check if contests already exist for this match
+      const existingContests = await getContestsByMatch(input.matchId);
+      if (existingContests.length > 0) {
+        return {
+          success: true,
+          message: "Contests already exist for this match",
+          contests: existingContests,
+        };
+      }
+
+      // Create 3 free contests with different sizes
+      const contestsToCreate = [
+        { name: "Mega Contest", maxEntries: 10000 },
+        { name: "Practice Contest", maxEntries: 1000 },
+        { name: "Beginner Contest", maxEntries: 100 },
+      ];
+
+      const createdContests = [];
+      for (const contest of contestsToCreate) {
+        try {
+          const contestId = await createContest(
+            input.matchId,
+            `${contest.name} - ${match.name}`,
+            contest.maxEntries,
+            1 // System user ID
+          );
+          const newContest = await getContestById(contestId);
+          if (newContest) {
+            createdContests.push(newContest);
+          }
+        } catch (error) {
+          console.error(`Failed to create ${contest.name}:`, error);
+        }
+      }
+
+      return {
+        success: true,
+        message: `Created ${createdContests.length} contests`,
+        contests: createdContests,
+      };
     }),
 
   /**

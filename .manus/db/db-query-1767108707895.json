@@ -1,0 +1,90 @@
+{
+  "query": "SELECT id, name, matchType, matchStarted, matchEnded, dateTimeGMT \nFROM matches \nORDER BY matchStarted ASC, matchEnded ASC, dateTimeGMT ASC \nLIMIT 10;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2EKhjpwgmHfHvW4.4164de301b73 --database aHKMyW7q8Yzq4ixgg6hEiM --execute SELECT id, name, matchType, matchStarted, matchEnded, dateTimeGMT \nFROM matches \nORDER BY matchStarted ASC, matchEnded ASC, dateTimeGMT ASC \nLIMIT 10;",
+  "rows": [
+    {
+      "id": "baaa99a9-1c87-4c61-a13e-7136991fa173",
+      "name": "Desert Vipers vs MI Emirates, Qualifier 1",
+      "matchType": "t20",
+      "matchStarted": "1",
+      "matchEnded": "0",
+      "dateTimeGMT": "2025-12-30T14:30:00"
+    },
+    {
+      "id": "6c029e59-6ec6-43c4-b280-7b24d7ef396c",
+      "name": "Durban Super Giants vs Joburg Super Kings, 6th Match",
+      "matchType": "t20",
+      "matchStarted": "1",
+      "matchEnded": "0",
+      "dateTimeGMT": "2025-12-30T15:30:00"
+    },
+    {
+      "id": "ac3550e9-67f7-4c7f-8589-177bb503ea84",
+      "name": "Wellington vs Auckland, 4th Match",
+      "matchType": "t20",
+      "matchStarted": "1",
+      "matchEnded": "1",
+      "dateTimeGMT": "2025-12-29T03:25:00"
+    },
+    {
+      "id": "2c7a3807-4770-4777-a37b-aa721622b599",
+      "name": "Himachal Pradesh vs Maharashtra, Group C",
+      "matchType": "odi",
+      "matchStarted": "1",
+      "matchEnded": "1",
+      "dateTimeGMT": "2025-12-29T03:30:00"
+    },
+    {
+      "id": "4f66de92-d2ef-46d4-9462-7fec7973b7b4",
+      "name": "Delhi vs Saurashtra, Group D",
+      "matchType": "odi",
+      "matchStarted": "1",
+      "matchEnded": "1",
+      "dateTimeGMT": "2025-12-29T03:30:00"
+    },
+    {
+      "id": "0c59dfcf-97b3-4368-9084-495fb2cb576e",
+      "name": "Karnataka vs Tamil Nadu, Group A",
+      "matchType": "odi",
+      "matchStarted": "1",
+      "matchEnded": "1",
+      "dateTimeGMT": "2025-12-29T03:30:00"
+    },
+    {
+      "id": "6d905314-e3f5-4d58-b5ab-315bf325c512",
+      "name": "Kerala vs Madhya Pradesh, Group A",
+      "matchType": "odi",
+      "matchStarted": "1",
+      "matchEnded": "1",
+      "dateTimeGMT": "2025-12-29T03:30:00"
+    },
+    {
+      "id": "2c95a5b3-4ad0-4c1d-ba40-10d075f5ca80",
+      "name": "Jharkhand vs Puducherry, Group A",
+      "matchType": "odi",
+      "matchStarted": "1",
+      "matchEnded": "1",
+      "dateTimeGMT": "2025-12-29T03:30:00"
+    },
+    {
+      "id": "6193263b-7e8c-4a71-84cb-42feb9735441",
+      "name": "Railways vs Services, Group D",
+      "matchType": "odi",
+      "matchStarted": "1",
+      "matchEnded": "1",
+      "dateTimeGMT": "2025-12-29T03:30:00"
+    },
+    {
+      "id": "564050c7-5d9d-45d3-bd7e-bd32634e24e7",
+      "name": "Bihar vs Meghalaya, Plate",
+      "matchType": "odi",
+      "matchStarted": "1",
+      "matchEnded": "1",
+      "dateTimeGMT": "2025-12-29T03:30:00"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\tmatchType\tmatchStarted\tmatchEnded\tdateTimeGMT\nbaaa99a9-1c87-4c61-a13e-7136991fa173\tDesert Vipers vs MI Emirates, Qualifier 1\tt20\t1\t0\t2025-12-30T14:30:00\n6c029e59-6ec6-43c4-b280-7b24d7ef396c\tDurban Super Giants vs Joburg Super Kings, 6th Match\tt20\t1\t0\t2025-12-30T15:30:00\nac3550e9-67f7-4c7f-8589-177bb503ea84\tWellington vs Auckland, 4th Match\tt20\t1\t1\t2025-12-29T03:25:00\n2c7a3807-4770-4777-a37b-aa721622b599\tHimachal Pradesh vs Maharashtra, Group C\todi\t1\t1\t2025-12-29T03:30:00\n4f66de92-d2ef-46d4-9462-7fec7973b7b4\tDelhi vs Saurashtra, Group D\todi\t1\t1\t2025-12-29T03:30:00\n0c59dfcf-97b3-4368-9084-495fb2cb576e\tKarnataka vs Tamil Nadu, Group A\todi\t1\t1\t2025-12-29T03:30:00\n6d905314-e3f5-4d58-b5ab-315bf325c512\tKerala vs Madhya Pradesh, Group A\todi\t1\t1\t2025-12-29T03:30:00\n2c95a5b3-4ad0-4c1d-ba40-10d075f5ca80\tJharkhand vs Puducherry, Group A\todi\t1\t1\t2025-12-29T03:30:00\n6193263b-7e8c-4a71-84cb-42feb9735441\tRailways vs Services, Group D\todi\t1\t1\t2025-12-29T03:30:00\n564050c7-5d9d-45d3-bd7e-bd32634e24e7\tBihar vs Meghalaya, Plate\todi\t1\t1\t2025-12-29T03:30:00\n",
+  "stderr": "",
+  "execution_time_ms": 1603
+}

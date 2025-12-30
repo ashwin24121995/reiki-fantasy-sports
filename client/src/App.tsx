@@ -33,6 +33,8 @@ import CreateTeam from "./pages/CreateTeam";
 import MyTeams from "./pages/MyTeams";
 import Leaderboard from "./pages/Leaderboard";
 import Profile from "./pages/Profile";
+import Contests from "./pages/Contests";
+import ContestDetails from "./pages/ContestDetails";
 
 function Router() {
   return (
@@ -63,6 +65,8 @@ function Router() {
       <Route path={"/my-teams"} component={MyTeams} />
       <Route path={"/leaderboard"} component={Leaderboard} />
       <Route path={"/profile"} component={Profile} />
+      <Route path={"/contests"} component={Contests} />
+      <Route path={"/contests/:id"} component={ContestDetails} />
       
       {/* 404 */}
       <Route path={"/404"} component={NotFound} />

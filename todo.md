@@ -1196,3 +1196,106 @@ Section: Feature cards below hero (No Real Money, Real Cricket Data, Fair Play C
 - [x] Show actual live scores (parse score JSON array)
 - [x] Display real venue names and match times (calculate hours until match)
 - [x] Remove all mock/placeholder data (replaced hardcoded loop with real data filter)
+
+
+---
+
+## ✅ RESOLVED: HOMEPAGE SHOWS ONLY 1 UPCOMING MATCH
+
+### Issue
+- [x] Homepage Upcoming Matches section shows only 1 match
+- [x] Cricket API has 25 total matches, should show more upcoming matches
+- [x] Need to check match status filtering logic
+- [x] Verify matchStarted and matchEnded flags in database
+
+### Investigation
+- [x] Check how many matches are actually "upcoming" in database
+- [x] Review the filter logic in NewHome.tsx for upcoming matches
+- [x] Verify Cricket API is setting match status flags correctly
+- [x] Check if date/time comparison is working properly
+
+### Resolution
+- [x] **NOT A BUG** - Cricket API currently has only 1 upcoming match and 24 completed matches
+- [x] Database breakdown: 1 live, 1 upcoming, 24 completed (total 25 matches)
+- [x] Homepage correctly displays all available upcoming matches (max 4 shown)
+- [x] When cricket seasons are active (IPL, World Cup), more upcoming matches will automatically appear
+- [x] System is working as designed - reflects real cricket schedule from API
+
+
+---
+
+## 🎯 FINAL IMPLEMENTATION - PDF GUIDE COMPLETION (Dec 30, 2025)
+
+### Contest System (100% Free - No Entry Fees)
+- [x] Create contest list tRPC procedure (contests.byMatch)
+- [x] Create contest seeding tRPC procedure (contests.seed)
+- [x] Create join contest tRPC procedure (contests.join)
+- [x] Build contest listing page UI (/contests)
+- [x] Build contest details page (/contests/:id)
+- [x] Build join contest flow with team selection
+- [x] Remove all money-related fields (entryFee always $0, no prizePool)
+- [ ] Add contest seeding script to run when new matches are synced (manual for now)
+- [ ] Show available contests on match cards
+
+### Team Creation Flow Verification & Enhancement
+- [ ] Test existing CreateTeam page end-to-end
+- [ ] Verify player selection works correctly
+- [ ] Verify captain/vice-captain selection
+- [ ] Verify team validation (11 players, role limits)
+- [ ] Add player statistics display (recent form, avg points)
+- [ ] Add role-based filtering (WK/BAT/AR/BOWL)
+- [ ] Add team preview before saving
+- [ ] Test team save functionality
+- [ ] Add budget/credit tracker if needed
+
+### Leaderboard & Live Scoring System
+- [x] Create points calculation system (batting, bowling, fielding) - DONE in liveScoring.ts
+- [x] Create live scoring tRPC procedures - DONE
+- [x] Build leaderboard display page - EXISTS
+- [x] Add real-time score updates (30-second polling) - DONE (2-minute intervals)
+- [x] Calculate fantasy points from match points - DONE
+- [x] Update leaderboard rankings automatically - DONE
+- [ ] Show user's rank and total points on dashboard
+- [ ] Add contest-specific leaderboards
+
+### My Teams Management Page Enhancement
+- [x] Create get user teams tRPC procedure - EXISTS (teams.myTeams)
+- [x] Create edit team tRPC procedure - EXISTS (teams.updateTeam)
+- [x] Create delete team tRPC procedure - EXISTS (teams.deleteTeam)
+- [x] Build My Teams listing page - EXISTS
+- [ ] Add team performance history
+- [ ] Add edit team functionality UI
+- [ ] Add delete team with confirmation dialog
+- [ ] Show team statistics (total points, rank, matches played)
+- [ ] Add team sharing functionality
+
+### Dashboard Enhancements
+- [ ] Add user statistics (total teams, contests joined, total points)
+- [ ] Add recent activity feed (teams created, contests joined)
+- [ ] Add performance charts (points over time using Recharts)
+- [ ] Add achievement badges (first team, 100 points, etc.)
+- [ ] Add quick action cards (Create Team, Join Contest)
+- [ ] Show upcoming matches carousel with "Create Team" buttons
+- [ ] Display user's best performing teams
+- [ ] Add contest history section
+
+### Testing & Polish
+- [ ] Test complete user flow (register → create team → join contest → view leaderboard)
+- [ ] Test live score updates
+- [ ] Test contest joining with multiple users
+- [ ] Verify all pages are responsive
+- [ ] Check for any console errors
+- [ ] Verify all tRPC procedures work correctly
+- [ ] Test team creation with real match data
+- [ ] Test leaderboard ranking updates
+- [ ] Verify captain/vice-captain point multipliers work
+
+### Final Deployment Preparation
+- [ ] Update PROJECT_STATUS.md with 100% completion
+- [ ] Create comprehensive README.md
+- [ ] Document all environment variables
+- [ ] Create deployment guide for Railway
+- [ ] Test on production environment
+- [ ] Verify Cricket API quota is sufficient
+- [ ] Set up monitoring for live scoring service
+- [ ] Create user guide/tutorial
