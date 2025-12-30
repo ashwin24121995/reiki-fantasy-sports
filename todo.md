@@ -1236,6 +1236,7 @@ Section: Feature cards below hero (No Real Money, Real Cricket Data, Fair Play C
 - [x] Remove all money-related fields (entryFee always $0, no prizePool)
 - [ ] Add contest seeding script to run when new matches are synced (manual for now)
 - [ ] Show available contests on match cards
+- [x] Fix Contests page to show ALL matches (live, upcoming, completed) not just matches with contests
 
 ### Team Creation Flow Verification & Enhancement
 - [ ] Test existing CreateTeam page end-to-end
