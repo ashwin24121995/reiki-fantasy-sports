@@ -1110,3 +1110,33 @@ Section: Feature cards below hero (No Real Money, Real Cricket Data, Fair Play C
 - [ ] Update ENV_VARIABLES.md to remove payment-related vars
 - [ ] Update README to emphasize free platform
 - [ ] Update legal pages to reflect no-money policy
+
+
+---
+
+## 🏏 CRICKET API INTEGRATION (LIVE DATA)
+
+### API Configuration
+- [x] Add CRIC_API_KEY to environment variables
+- [x] Configure API endpoints for live data
+- [x] Test API connectivity
+
+### API Endpoints to Implement
+- [x] Get current matches (live, upcoming, completed)
+- [x] Get match details by ID
+- [x] Get match squad (players for each match)
+- [x] Get live scores and ball-by-ball updates
+- [x] Get player statistics
+
+### Data Sync
+- [x] Update auto-sync service to use real API
+- [x] Implement error handling for API failures
+- [x] Add rate limiting protection
+- [x] Cache API responses appropriately
+
+### Testing
+- [x] Verify matches display with real data
+- [x] Verify player lists are populated
+- [x] Verify live scores update correctly
+- [x] Test with API key provided: 1a822521-d7e0-46ff-98d3-3e51020863f3
+- [x] Fixed JSON parsing issue for teamInfo/teams/score fields

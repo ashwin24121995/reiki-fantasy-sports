@@ -22,6 +22,22 @@ import {
 import type { MatchData, PlayerData, SquadData, MatchPointsData } from "./cricketApi";
 
 // ============================================
+// HELPER FUNCTIONS
+// ============================================
+
+/**
+ * Parse JSON fields in match records
+ */
+function parseMatchJson(match: Match): Match {
+  return {
+    ...match,
+    teams: typeof match.teams === 'string' ? JSON.parse(match.teams) : match.teams,
+    teamInfo: typeof match.teamInfo === 'string' ? JSON.parse(match.teamInfo) : match.teamInfo,
+    score: match.score && typeof match.score === 'string' ? JSON.parse(match.score) : match.score,
+  };
+}
+
+// ============================================
 // MATCH MANAGEMENT
 // ============================================
 
@@ -72,48 +88,55 @@ export async function getMatchById(matchId: string): Promise<Match | undefined> 
   if (!db) return undefined;
 
   const result = await db.select().from(matches).where(eq(matches.id, matchId)).limit(1);
-  return result.length > 0 ? result[0] : undefined;
+  return result.length > 0 ? parseMatchJson(result[0]) : undefined;
 }
 
 export async function getUpcomingMatches(): Promise<Match[]> {
   const db = await getDb();
   if (!db) return [];
 
-  return await db
+  const results = await db
     .select()
     .from(matches)
     .where(and(eq(matches.matchStarted, false), eq(matches.matchEnded, false)))
     .orderBy(matches.dateTimeGMT);
+  
+  return results.map(parseMatchJson);
 }
 
 export async function getLiveMatches(): Promise<Match[]> {
   const db = await getDb();
   if (!db) return [];
 
-  return await db
+  const results = await db
     .select()
     .from(matches)
     .where(and(eq(matches.matchStarted, true), eq(matches.matchEnded, false)))
     .orderBy(desc(matches.lastUpdated));
+  
+  return results.map(parseMatchJson);
 }
 
 export async function getCompletedMatches(limit: number = 20): Promise<Match[]> {
   const db = await getDb();
   if (!db) return [];
 
-  return await db
+  const results = await db
     .select()
     .from(matches)
     .where(eq(matches.matchEnded, true))
     .orderBy(desc(matches.dateTimeGMT))
     .limit(limit);
+  
+  return results.map(parseMatchJson);
 }
 
 export async function getAllMatches(): Promise<Match[]> {
   const db = await getDb();
   if (!db) return [];
 
-  return await db.select().from(matches).orderBy(desc(matches.dateTimeGMT));
+  const results = await db.select().from(matches).orderBy(desc(matches.dateTimeGMT));
+  return results.map(parseMatchJson);
 }
 
 // ============================================
