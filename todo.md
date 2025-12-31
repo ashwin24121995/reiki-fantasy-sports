@@ -1538,5 +1538,5 @@ User provided new logo versions with correct theme logic:
 User requested logo size adjustment:
 - [x] Update Header.tsx logo size to w-[71px] h-20 (80px)
 - [x] Update Footer.tsx logo size to w-[71px] h-20 (80px)
-- [ ] Commit and push to GitHub
-- [ ] Verify on live website
+- [x] Commit and push to GitHub (commit 9b9b1f6)
+- [ ] Verify on live website (waiting for Railway deployment)
