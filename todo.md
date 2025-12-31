@@ -1501,5 +1501,15 @@ Section: Feature cards below hero (No Real Money, Real Cricket Data, Fair Play C
 - [x] Fix environment variable defaults for production build (replaced with __dirname)
 - [ ] Add fallback values for optional environment variables
 - [x] Test build process locally (build successful!)
-- [ ] Push fix to GitHub
-- [ ] Redeploy to Railway and verify success
+- [x] Push fix to GitHub (commit 1ccf8d7)
+- [ ] Redeploy to Railway and verify success (user action required)
+
+
+---
+
+## 🔄 Railway Cache Issue (Dec 31, 2025)
+- [ ] Railway is using cached old build despite fix being in GitHub
+- [ ] Force Railway to rebuild by clearing build cache
+- [ ] Make trivial change to trigger fresh deployment
+- [ ] Push to GitHub to force Railway redeploy
+- [ ] Verify Railway deploys with new code (check logs for __dirname instead of import.meta.dirname)
