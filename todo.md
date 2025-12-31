@@ -1548,5 +1548,5 @@ User made visual edit through UI editor - apply to both header and footer:
 - [x] Update Header.tsx logo size to 114px width × 70px height (both light and dark logos)
 - [x] Update Footer.tsx logo size to 114px width × 70px height (both light and dark logos)
 - [x] Clean up inline styles, use consistent approach
-- [ ] Commit and push to GitHub
-- [ ] Verify on live website
+- [x] Commit and push to GitHub (commit 8b1064c)
+- [ ] Verify on live website (waiting for Railway deployment)
