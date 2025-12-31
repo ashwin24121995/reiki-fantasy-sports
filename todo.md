@@ -1570,5 +1570,5 @@ User requested to remove phone number and business hours:
 - [x] Remove phone number section (+91 XXXX-XXXXXX)
 - [x] Remove business hours (Monday - Friday, 10 AM - 6 PM IST)
 - [x] Remove unused Phone icon import
-- [ ] Commit and push to GitHub
-- [ ] Verify on live website
+- [x] Commit and push to GitHub (commit 59274f8)
+- [ ] Verify on live website (waiting for Railway deployment)
