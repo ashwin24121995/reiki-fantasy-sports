@@ -1,0 +1,49 @@
+{
+  "query": "SHOW TABLES;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2EKhjpwgmHfHvW4.4164de301b73 --database aHKMyW7q8Yzq4ixgg6hEiM --execute SHOW TABLES;",
+  "rows": [
+    {
+      "Tables_in_aHKMyW7q8Yzq4ixgg6hEiM": "__drizzle_migrations"
+    },
+    {
+      "Tables_in_aHKMyW7q8Yzq4ixgg6hEiM": "contest_entries"
+    },
+    {
+      "Tables_in_aHKMyW7q8Yzq4ixgg6hEiM": "contests"
+    },
+    {
+      "Tables_in_aHKMyW7q8Yzq4ixgg6hEiM": "fantasy_teams"
+    },
+    {
+      "Tables_in_aHKMyW7q8Yzq4ixgg6hEiM": "leaderboards"
+    },
+    {
+      "Tables_in_aHKMyW7q8Yzq4ixgg6hEiM": "match_points"
+    },
+    {
+      "Tables_in_aHKMyW7q8Yzq4ixgg6hEiM": "match_squads"
+    },
+    {
+      "Tables_in_aHKMyW7q8Yzq4ixgg6hEiM": "matches"
+    },
+    {
+      "Tables_in_aHKMyW7q8Yzq4ixgg6hEiM": "players"
+    },
+    {
+      "Tables_in_aHKMyW7q8Yzq4ixgg6hEiM": "system_settings"
+    },
+    {
+      "Tables_in_aHKMyW7q8Yzq4ixgg6hEiM": "team_players"
+    },
+    {
+      "Tables_in_aHKMyW7q8Yzq4ixgg6hEiM": "transactions"
+    },
+    {
+      "Tables_in_aHKMyW7q8Yzq4ixgg6hEiM": "users"
+    }
+  ],
+  "messages": [],
+  "stdout": "Tables_in_aHKMyW7q8Yzq4ixgg6hEiM\n__drizzle_migrations\ncontest_entries\ncontests\nfantasy_teams\nleaderboards\nmatch_points\nmatch_squads\nmatches\nplayers\nsystem_settings\nteam_players\ntransactions\nusers\n",
+  "stderr": "",
+  "execution_time_ms": 1517
+}
