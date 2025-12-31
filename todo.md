@@ -1492,3 +1492,14 @@ Section: Feature cards below hero (No Real Money, Real Cricket Data, Fair Play C
 - [ ] PORT (server port, default 3000)
 - [ ] NODE_ENV (production/development)
 - [ ] Optional: S3 credentials if using cloud storage
+
+
+---
+
+## 🐛 Railway Deployment Error Fix (Dec 31, 2025)
+- [x] Investigate undefined path error at dist/index.js:1752 (import.meta.dirname undefined in Node.js 18)
+- [x] Fix environment variable defaults for production build (replaced with __dirname)
+- [ ] Add fallback values for optional environment variables
+- [x] Test build process locally (build successful!)
+- [ ] Push fix to GitHub
+- [ ] Redeploy to Railway and verify success
