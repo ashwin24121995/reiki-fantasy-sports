@@ -1523,3 +1523,57 @@ Section: Feature cards below hero (No Real Money, Real Cricket Data, Fair Play C
 - [ ] Add fallback to port 3000 for local development
 - [ ] Test build and push to GitHub
 - [ ] Verify Railway deployment succeeds on correct port
+
+
+---
+
+## 🧪 LIVE WEBSITE TESTING - Dec 31, 2025 (smartplaydrafts.com)
+
+**User Request: Test everything on live domain, check all buttons, create team, investigate missing matches**
+
+### Homepage Testing
+- [ ] Test all navigation links (Home, About Us, FAQ, Contact)
+- [ ] Test "Start Learning Free" button
+- [ ] Test "View All" buttons for Live/Upcoming matches
+- [ ] Test "View Details" button for matches
+- [ ] Test "Register to Play" button
+- [ ] Test "Learn More" button
+- [ ] Test carousel navigation (image slider)
+- [ ] Test all footer links (Terms, Privacy, Fair Play, Responsible Gaming)
+
+### Authentication Testing
+- [ ] Test Register button and registration flow
+- [ ] Test Login button and login flow
+- [ ] Test logout functionality
+- [ ] Verify JWT token persistence
+
+### Match & Team Testing
+- [ ] Test "Create Team" button for upcoming matches
+- [ ] Test player selection interface
+- [ ] Test captain/vice-captain selection
+- [ ] Test team submission
+- [ ] Test "My Teams" page
+- [ ] Test match details page
+
+### Contest Testing
+- [ ] Test contest listing page
+- [ ] Test "Join Contest" functionality
+- [ ] Test leaderboard display
+- [ ] Test "Seed All Contests" feature
+
+### Critical Bug Investigation
+- [ ] **URGENT**: Investigate why many Cricket API matches are NOT displaying on website
+- [ ] Check if Cricket Sync service is running on Railway
+- [ ] Verify database connection on production
+- [ ] Check server logs for sync errors
+- [ ] Compare API response vs database records
+- [ ] Fix match sync issue if found
+
+### Content & Legal Pages
+- [ ] Test About Us page content
+- [ ] Test FAQ page and search functionality
+- [ ] Test Contact page form
+- [ ] Test Terms & Conditions page
+- [ ] Test Privacy Policy page
+- [ ] Test Fair Play page
+- [ ] Test Responsible Gaming page
