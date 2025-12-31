@@ -1572,3 +1572,46 @@ User requested to remove phone number and business hours:
 - [x] Remove unused Phone icon import
 - [x] Commit and push to GitHub (commit 59274f8)
 - [ ] Verify on live website (waiting for Railway deployment)
+
+
+## 🚨 GOOGLE ADS COMPLIANCE FIXES - Dec 31, 2025
+
+Critical fixes based on Google Ads suspension audit report:
+
+### Stop Cloaking - Remove Educational Misrepresentation:
+- [x] Remove "Educational Platform" badge from homepage (changed to "Fantasy Sports Platform")
+- [x] Remove "Khan Academy" references from FAQ
+- [x] Remove all "education" and "learning" claims
+- [x] Update messaging to "Fantasy Sports Platform" or "Fantasy Cricket Game"
+- [x] Use consistent messaging across all pages
+
+### Update Homepage:
+- [x] Change "100% Free to Play Educational Platform" badge to "Fantasy Sports Platform"
+- [x] Update hero section copy to remove "learning" language (changed to "Play fantasy cricket")
+- [x] Change "Start Learning Free" button to "Start Playing Free" (2 instances)
+- [x] Update feature cards to focus on gaming ("Pure skill-based gaming")
+- [x] Change "learners" to "players" in CTA section
+
+### Update FAQ:
+- [x] Remove "Khan Academy of fantasy cricket" comparison
+- [x] Remove "built exclusively for education and skill development"
+- [x] Update answers to acknowledge gaming nature honestly
+- [x] Remove "educational platform" from multiple FAQ answers
+- [x] Change "educational mission" to "platform goals"
+- [x] Update investor backing to remove "sports education" language
+
+### Update Other Pages:
+- [x] About Us: Remove educational mission statements (completed all changes)
+  - Changed "learning" to "playing" throughout
+  - Removed Khan Academy comparison
+  - Changed "educational platform" to "fantasy sports platform"
+  - Updated values from "Education First" to "Skill-Based Gaming"
+  - Changed "Educators" to "Game Designers" in team
+  - Updated roadmap to remove certification programs
+- [ ] How It Works: Change "learning" to "playing" (if page exists)
+- [ ] Responsible Gaming: Keep as-is (appropriate for gaming platform)
+- [ ] Fair Play: Keep as-is (appropriate for gaming platform)
+
+### Technical Fixes:
+- [ ] Display full contact information (already removed phone, keep email/address)
+- [ ] Ensure consistent branding as fantasy sports platform

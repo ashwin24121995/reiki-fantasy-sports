@@ -84,11 +84,11 @@ export default function About() {
             
             <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground">
               <p className="text-lg leading-relaxed">
-                REIKI ENERGY GLOBAL PRIVATE LIMITED was born from a simple observation: millions of cricket fans in India wanted to learn and play fantasy cricket, but the existing platforms created financial barriers that excluded many passionate enthusiasts. We asked ourselves—<strong>why should learning require spending money?</strong>
+                REIKI ENERGY GLOBAL PRIVATE LIMITED was born from a simple observation: millions of cricket fans in India wanted to play fantasy cricket, but the existing platforms created financial barriers that excluded many passionate enthusiasts. We asked ourselves—<strong>why should fantasy sports require spending money?</strong>
               </p>
               
               <p className="text-lg leading-relaxed">
-                Founded in March 2024 and headquartered in Karnal, Haryana, we set out to build something different. Not another pay-to-play platform, but India's first truly educational fantasy cricket ecosystem where anyone with a love for cricket could learn, practice, and master the art of fantasy sports—<strong>completely free, forever</strong>.
+                Founded in March 2024 and headquartered in Karnal, Haryana, we set out to build something different. Not another pay-to-play platform, but India's first truly free fantasy cricket platform where anyone with a love for cricket could practice and master the art of fantasy sports—<strong>completely free, forever</strong>.
               </p>
 
               <p className="text-lg leading-relaxed">
@@ -99,13 +99,13 @@ export default function About() {
                 <CardContent className="pt-6">
                   <p className="text-lg font-semibold mb-2">Our Core Belief</p>
                   <p className="text-muted-foreground italic">
-                    "Fantasy cricket should be about sharpening your mind, not emptying your wallet. Every cricket fan deserves the chance to learn, compete, and improve—regardless of their financial situation."
+                    "Fantasy cricket should be about sharpening your mind, not emptying your wallet. Every cricket fan deserves the chance to compete and improve—regardless of their financial situation."
                   </p>
                 </CardContent>
               </Card>
 
               <p className="text-lg leading-relaxed">
-                Today, REIKI ENERGY serves thousands of users across India, providing a safe, transparent, and completely free platform for fantasy cricket education. We're backed by investors who share our vision of democratizing sports education and making skill development accessible to all.
+                Today, REIKI ENERGY serves thousands of users across India, providing a safe, transparent, and completely free platform for fantasy cricket. We're backed by investors who share our vision of making fantasy sports accessible to all.
               </p>
             </div>
           </section>
@@ -204,7 +204,7 @@ export default function About() {
 
             <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground">
               <p className="text-lg leading-relaxed">
-                <strong>The honest answer: We're an educational platform funded by investors who believe in democratizing sports education.</strong> Here's the complete transparency you deserve:
+                <strong>The honest answer: We're a free-to-play platform funded by investors who believe in making fantasy sports accessible.</strong> Here's the complete transparency you deserve:
               </p>
 
               <div className="grid md:grid-cols-2 gap-6 my-8">
@@ -216,10 +216,10 @@ export default function About() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-3">
-                    <p>✅ Provide 100% free fantasy cricket education</p>
+                    <p>✅ Provide 100% free fantasy cricket platform</p>
                     <p>✅ Cover all operational costs through investor funding</p>
-                    <p>✅ Focus on skill development and learning</p>
-                    <p>✅ Build a sustainable educational ecosystem</p>
+                    <p>✅ Focus on skill-based gaming</p>
+                    <p>✅ Build a sustainable gaming ecosystem</p>
                     <p>✅ Explore ethical revenue models (future): non-intrusive ads, premium analytics tools, cricket merchandise partnerships</p>
                   </CardContent>
                 </Card>
@@ -246,7 +246,7 @@ export default function About() {
               </p>
 
               <p className="text-lg leading-relaxed">
-                Think of us like Khan Academy or Duolingo for fantasy cricket—education-first platforms that prioritize learning over profit. We're playing the long game, building trust and value for our users before exploring sustainable revenue streams.
+                We're playing the long game, building trust and value for our users before exploring sustainable revenue streams. Our platform prioritizes user experience over profit.
               </p>
             </div>
           </section>
@@ -268,8 +268,8 @@ export default function About() {
               {[
                 {
                   icon: BookOpen,
-                  title: "Education First",
-                  description: "Every feature we build prioritizes learning and skill development. We measure success by how much our users improve, not by revenue metrics."
+                  title: "Skill-Based Gaming",
+                  description: "Every feature we build prioritizes strategic gameplay and skill development. We measure success by user engagement and satisfaction, not by revenue metrics."
                 },
                 {
                   icon: Shield,
@@ -325,7 +325,7 @@ export default function About() {
               <CardContent className="pt-6">
                 <p className="text-lg font-semibold mb-2">Important Legal Disclosure</p>
                 <p className="text-muted-foreground leading-relaxed">
-                  REIKI ENERGY operates as a <strong>skill-based educational platform</strong>, not a gambling or betting service. We comply with all applicable Indian laws and regulations.
+                  REIKI ENERGY operates as a <strong>skill-based fantasy sports platform</strong>, not a gambling or betting service. We comply with all applicable Indian laws and regulations.
                 </p>
               </CardContent>
             </Card>
@@ -354,9 +354,9 @@ export default function About() {
 
                   <Card>
                     <CardContent className="pt-6">
-                      <h4 className="font-semibold mb-2">🎓 Educational Purpose</h4>
+                      <h4 className="font-semibold mb-2">🎮 Free-to-Play Gaming</h4>
                       <p className="text-muted-foreground">
-                        Classified as an educational platform focused on skill development. No real money transactions, deposits, or withdrawals. Purely for learning and practice.
+                        Classified as a skill-based fantasy sports platform. No real money transactions, deposits, or withdrawals. Purely for practice and competition.
                       </p>
                     </CardContent>
                   </Card>
@@ -503,8 +503,8 @@ export default function About() {
                       <p className="text-sm text-muted-foreground">Creating fair scoring algorithms and predictive analytics</p>
                     </div>
                     <div>
-                      <p className="font-semibold">🎓 Educators</p>
-                      <p className="text-sm text-muted-foreground">Designing learning pathways and skill development frameworks</p>
+                      <p className="font-semibold">🎮 Game Designers</p>
+                      <p className="text-sm text-muted-foreground">Designing gameplay features and user experience</p>
                     </div>
                   </div>
                 </CardContent>
@@ -540,7 +540,7 @@ export default function About() {
                     <p>• Launch mobile apps (iOS & Android)</p>
                     <p>• Add advanced analytics and player insights</p>
                     <p>• Build community features (chat, forums, team sharing)</p>
-                    <p>• Introduce educational tutorials and strategy guides</p>
+                    <p>• Introduce strategy guides and gameplay tips</p>
                   </CardContent>
                 </Card>
 
@@ -551,9 +551,9 @@ export default function About() {
                   <CardContent className="space-y-2 text-sm">
                     <p>• Expand to other sports (football, kabaddi, basketball)</p>
                     <p>• Partner with cricket academies for talent scouting</p>
-                    <p>• Create fantasy cricket certification programs</p>
+                    <p>• Create achievement and ranking systems</p>
                     <p>• Build AI-powered team suggestion tools</p>
-                    <p>• Establish REIKI ENERGY as India's #1 fantasy sports education platform</p>
+                    <p>• Establish REIKI ENERGY as India's #1 free fantasy sports platform</p>
                   </CardContent>
                 </Card>
               </div>
@@ -568,7 +568,7 @@ export default function About() {
           <section className="bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl p-12 text-center text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Start Your Journey?</h2>
             <p className="text-xl mb-8 opacity-90">
-              Join thousands of cricket enthusiasts learning and competing on India's most transparent fantasy cricket platform
+              Join thousands of cricket enthusiasts competing on India's most transparent fantasy cricket platform
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/register">

@@ -31,7 +31,7 @@ export default function FAQ() {
       questions: [
         {
           q: 'What is REIKI ENERGY and what makes it different?',
-          a: 'REIKI ENERGY is India\'s first 100% free-to-play fantasy cricket platform built exclusively for education and skill development. Unlike traditional fantasy platforms that require entry fees and offer cash prizes, we provide a completely risk-free environment where cricket fans can learn, practice, and master fantasy cricket strategies without spending a single rupee. We\'re backed by investors who believe in democratizing sports education, allowing us to operate without charging users or selling data. Think of us as the "Khan Academy" of fantasy cricket—education-first, transparent, and permanently free.',
+          a: 'REIKI ENERGY is India\'s first 100% free-to-play fantasy cricket platform. Unlike traditional fantasy platforms that require entry fees and offer cash prizes, we provide a completely risk-free environment where cricket fans can practice and master fantasy cricket strategies without spending a single rupee. We\'re funded by investors who believe in making fantasy sports accessible to everyone, allowing us to operate without charging users. Our platform is skill-based, transparent, and permanently free.',
         },
         {
           q: 'How do I create an account on REIKI ENERGY?',
@@ -54,7 +54,7 @@ export default function FAQ() {
       questions: [
         {
           q: 'Why do I need to verify my age (18+)?',
-          a: 'Age verification is a strict legal requirement under Indian gaming regulations. Fantasy sports platforms, even free-to-play educational ones like REIKI ENERGY, must ensure all users are 18 years or older. This protects minors from exposure to competitive gaming environments and ensures compliance with state and central government regulations. During registration, you provide your date of birth, and our system automatically calculates your age. We take this seriously—accounts found to belong to minors will be immediately suspended. This policy applies nationwide regardless of state-specific rules.',
+          a: 'Age verification is a strict legal requirement under Indian gaming regulations. Fantasy sports platforms, including free-to-play platforms like REIKI ENERGY, must ensure all users are 18 years or older. This protects minors from exposure to competitive gaming environments and ensures compliance with state and central government regulations. During registration, you provide your date of birth, and our system automatically calculates your age. We take this seriously—accounts found to belong to minors will be immediately suspended. This policy applies nationwide regardless of state-specific rules.',
         },
         {
           q: 'Which Indian states are restricted from playing?',
@@ -93,7 +93,7 @@ export default function FAQ() {
         },
         {
           q: 'Is there a budget or credit system for selecting players?',
-          a: 'No, REIKI ENERGY does NOT use a budget or credit system. Unlike paid fantasy platforms that assign artificial "credit values" to players (forcing you to make trade-offs based on budget constraints), we allow you to select any 11 players you want based purely on skill, form, and strategy. This design choice reflects our educational mission—we want you to focus on understanding player performance, match conditions, and strategic thinking, not on managing an arbitrary budget. You have complete freedom to pick the best possible team without financial constraints.',
+          a: 'No, REIKI ENERGY does NOT use a budget or credit system. Unlike paid fantasy platforms that assign artificial "credit values" to players (forcing you to make trade-offs based on budget constraints), we allow you to select any 11 players you want based purely on skill, form, and strategy. This design choice allows you to focus on understanding player performance, match conditions, and strategic thinking, not on managing an arbitrary budget. You have complete freedom to pick the best possible team without financial constraints.',
         },
         {
           q: 'What is the difference between Captain and Vice-Captain?',
@@ -159,7 +159,7 @@ export default function FAQ() {
         },
         {
           q: 'What do I win if I rank #1 on the leaderboard?',
-          a: 'REIKI ENERGY does not offer cash prizes, rewards, or any form of monetary compensation. Ranking #1 on the leaderboard is a recognition of your strategic thinking, cricket knowledge, and fantasy skills—nothing more. Your achievement is displayed publicly on the leaderboard, and you can take pride in outperforming thousands of other users. This is an educational platform, not a gambling or prize-money platform. If you\'re looking to win money, REIKI ENERGY is not the right platform for you. Our goal is to help you learn and improve your fantasy cricket skills in a risk-free environment.',
+          a: 'REIKI ENERGY does not offer cash prizes, rewards, or any form of monetary compensation. Ranking #1 on the leaderboard is a recognition of your strategic thinking, cricket knowledge, and fantasy skills—nothing more. Your achievement is displayed publicly on the leaderboard, and you can take pride in outperforming thousands of other users. This is a free-to-play gaming platform, not a gambling or prize-money platform. If you\'re looking to win money, REIKI ENERGY is not the right platform for you. Our goal is to help you learn and improve your fantasy cricket skills in a risk-free environment.',
         },
         {
           q: 'Can I see other users\' team compositions?',
@@ -178,11 +178,11 @@ export default function FAQ() {
       questions: [
         {
           q: 'Is fantasy cricket legal in India?',
-          a: 'Yes, fantasy cricket is legal in most of India. The Supreme Court of India and various High Courts have recognized fantasy sports as a "game of skill" (not gambling or a game of chance), making it legal under Indian law. However, some states have enacted their own laws restricting or banning fantasy sports platforms. REIKI ENERGY complies with all applicable central and state regulations by: (1) Restricting access from states where fantasy sports are prohibited (AP, Assam, Odisha, Telangana, Nagaland, Sikkim), (2) Enforcing strict 18+ age verification, (3) Operating as a free-to-play educational platform (no real money involved), (4) Maintaining transparent operations and data practices. We are a legally registered company (CIN: U86909HR2024PTC119844) and fully compliant with Indian law.',
+          a: 'Yes, fantasy cricket is legal in most of India. The Supreme Court of India and various High Courts have recognized fantasy sports as a "game of skill" (not gambling or a game of chance), making it legal under Indian law. However, some states have enacted their own laws restricting or banning fantasy sports platforms. REIKI ENERGY complies with all applicable central and state regulations by: (1) Restricting access from states where fantasy sports are prohibited (AP, Assam, Odisha, Telangana, Nagaland, Sikkim), (2) Enforcing strict 18+ age verification, (3) Operating as a free-to-play platform (no real money involved), (4) Maintaining transparent operations and data practices. We are a legally registered company (CIN: U86909HR2024PTC119844) and fully compliant with Indian law.',
         },
         {
           q: 'Why is REIKI ENERGY completely free? What\'s the catch?',
-          a: 'There is no catch. REIKI ENERGY is genuinely 100% free because we are funded by investors who believe in sports education and want to provide a safe learning environment for cricket fans. Our investors understand that not everything needs to be monetized and that education has value beyond profit. We do not charge users, sell data, or push gambling-style mechanics. Our success is measured by how many people learn and improve, not by revenue. In the future, we may introduce optional premium features (like advanced analytics tools or cricket merchandise partnerships), but the core platform will always remain free. This is our permanent commitment, documented in our Terms of Service.',
+          a: 'There is no catch. REIKI ENERGY is genuinely 100% free because we are funded by investors who believe in making fantasy sports accessible and want to provide a safe environment for cricket fans. Our investors understand that not everything needs to be monetized and that education has value beyond profit. We do not charge users, sell data, or push gambling-style mechanics. Our success is measured by user engagement and satisfaction, not by revenue. In the future, we may introduce optional premium features (like advanced analytics tools or cricket merchandise partnerships), but the core platform will always remain free. This is our permanent commitment, documented in our Terms of Service.',
         },
         {
           q: 'How do you protect my personal data and privacy?',
@@ -274,7 +274,7 @@ export default function FAQ() {
         },
         {
           q: 'Can I suggest new features or improvements?',
-          a: 'Absolutely! We actively encourage user feedback and feature suggestions. REIKI ENERGY is built for the community, and your input directly shapes our development roadmap. To suggest features: (1) Visit our Contact page and select "Feature Suggestion" as the category, (2) Describe your idea in detail: what problem it solves, how it would work, and why it would benefit users, (3) Submit the form. We review all suggestions and prioritize based on user demand, technical feasibility, and alignment with our educational mission. Popular requested features include: team cloning, private contests, advanced player statistics, mobile apps, and multi-language support. While we can\'t implement every suggestion, we appreciate your creativity and involvement in making REIKI ENERGY better!',
+          a: 'Absolutely! We actively encourage user feedback and feature suggestions. REIKI ENERGY is built for the community, and your input directly shapes our development roadmap. To suggest features: (1) Visit our Contact page and select "Feature Suggestion" as the category, (2) Describe your idea in detail: what problem it solves, how it would work, and why it would benefit users, (3) Submit the form. We review all suggestions and prioritize based on user demand, technical feasibility, and platform goals. Popular requested features include: team cloning, private contests, advanced player statistics, mobile apps, and multi-language support. While we can\'t implement every suggestion, we appreciate your creativity and involvement in making REIKI ENERGY better!',
         },
       ],
     },

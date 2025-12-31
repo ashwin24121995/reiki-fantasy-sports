@@ -62,7 +62,7 @@ export default function NewHome() {
                 </Badge>
                 <Badge className="bg-secondary/10 text-secondary border-secondary/20 px-4 py-2 text-sm font-semibold">
                   <Trophy className="w-4 h-4 mr-2" />
-                  Educational Platform
+                  Fantasy Sports Platform
                 </Badge>
                 <Badge className="bg-primary/10 text-primary border-primary/20 px-4 py-2 text-sm font-semibold">
                   18+ Only
@@ -78,7 +78,7 @@ export default function NewHome() {
                   Skills
                 </h1>
                 <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-2xl">
-                  Learn fantasy cricket strategies without spending a rupee. Build teams, join contests, and compete with thousands of players.
+                  Play fantasy cricket without spending a rupee. Build teams, join contests, and compete with thousands of players.
                 </p>
               </div>
 
@@ -89,7 +89,7 @@ export default function NewHome() {
                   </div>
                   <div>
                     <h3 className="text-lg font-bold">No Real Money</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">Pure skill-based learning</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Pure skill-based gaming</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -132,7 +132,7 @@ export default function NewHome() {
                 ) : (
                   <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105 w-full sm:w-auto" asChild>
                     <Link href="/register">
-                      Start Learning Free
+                      Start Playing Free
                       <ArrowRight className="ml-2 w-5 h-5" />
                     </Link>
                   </Button>
@@ -912,7 +912,7 @@ export default function NewHome() {
             
             {/* Description */}
             <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-              Join thousands of learners who are improving their fantasy cricket skills every day. No payment required, just pure strategy and fun.
+              Join thousands of players who are improving their fantasy cricket skills every day. No payment required, just pure strategy and fun.
             </p>
 
             {/* CTA Buttons */}
@@ -928,7 +928,7 @@ export default function NewHome() {
                 <>
                   <Link href="/register">
                     <Button size="lg" className="bg-white text-emerald-600 hover:bg-white/90 px-10 py-7 text-lg font-bold rounded-full shadow-2xl hover:shadow-3xl transition-all hover:scale-105">
-                      Start Learning Free
+                      Start Playing Free
                       <ArrowRight className="ml-2 w-6 h-6" />
                     </Button>
                   </Link>
