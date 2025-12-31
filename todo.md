@@ -1513,3 +1513,13 @@ Section: Feature cards below hero (No Real Money, Real Cricket Data, Fair Play C
 - [ ] Make trivial change to trigger fresh deployment
 - [ ] Push to GitHub to force Railway redeploy
 - [ ] Verify Railway deploys with new code (check logs for __dirname instead of import.meta.dirname)
+
+
+---
+
+## 🔧 Railway Port Configuration Fix (Dec 31, 2025)
+- [ ] Server is hardcoded to port 3000, but Railway uses port 8080
+- [ ] Update server to use process.env.PORT environment variable
+- [ ] Add fallback to port 3000 for local development
+- [ ] Test build and push to GitHub
+- [ ] Verify Railway deployment succeeds on correct port
