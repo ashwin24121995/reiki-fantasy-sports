@@ -1529,3 +1529,14 @@ User provided new logo versions with correct theme logic:
 - [x] Fix Register.tsx to use same logic
 - [x] Commit and push to GitHub (commit 2f703ea - force pushed)
 - [ ] Verify on live website after Railway deployment (waiting 3 minutes)
+
+
+---
+
+## 📏 LOGO SIZE ADJUSTMENT - Dec 31, 2025
+
+User requested logo size adjustment:
+- [x] Update Header.tsx logo size to w-[71px] h-20 (80px)
+- [x] Update Footer.tsx logo size to w-[71px] h-20 (80px)
+- [ ] Commit and push to GitHub
+- [ ] Verify on live website

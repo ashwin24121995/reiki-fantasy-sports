@@ -91,12 +91,12 @@ export default function Header() {
               <img
                 src="/logo-dark.webp"
                 alt="REIKI ENERGY"
-                className="h-10 w-auto object-contain dark:hidden"
+                className="w-[71px] h-20 object-contain dark:hidden"
               />
               <img
                 src="/logo-light.webp"
                 alt="REIKI ENERGY"
-                className="h-10 w-auto object-contain hidden dark:block"
+                className="w-[71px] h-20 object-contain hidden dark:block"
               />
             </a>
           </Link>
