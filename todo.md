@@ -1461,3 +1461,34 @@ Section: Feature cards below hero (No Real Money, Real Cricket Data, Fair Play C
 - [x] Fix "View Results" button to link to correct page or create match results page (created MatchDetails.tsx)
 - [x] Test "View Results" button works without 404 error
 - [x] Verify match results display correctly (scores, winner, player stats)
+
+
+---
+
+## 🚀 Railway Deployment Preparation (Dec 31, 2025)
+
+### Remove Manus Dependencies
+- [x] Remove Manus OAuth authentication system
+- [x] Implement standard email/password authentication with JWT
+- [x] Remove all Manus branding and references from UI
+- [x] Remove Manus API dependencies (LLM, Storage, Notifications, Maps, Data API)
+- [x] Remove Manus S3 storage (file uploads disabled for now)
+- [x] Remove Manus-specific environment variables
+
+### Railway Deployment Setup
+- [x] Document all required environment variables for Railway
+- [x] Create comprehensive Railway deployment guide (RAILWAY_READY.md)
+- [x] Update database schema for standalone deployment
+- [x] Create Railway deployment guide (RAILWAY_DEPLOY.md)
+- [x] Test authentication system works independently
+- [x] Test all features work without Manus infrastructure
+- [x] Verify database migrations work on Railway MySQL
+- [x] Create GitHub repository preparation checklist
+
+### Environment Variables Needed
+- [ ] DATABASE_URL (MySQL connection string)
+- [ ] JWT_SECRET (for session tokens)
+- [ ] CRICKET_API_KEY (for cricket data)
+- [ ] PORT (server port, default 3000)
+- [ ] NODE_ENV (production/development)
+- [ ] Optional: S3 credentials if using cloud storage

@@ -1,6 +1,6 @@
 import { getSessionCookieOptions } from "./_core/cookies";
 import { COOKIE_NAME } from "@shared/const";
-import { systemRouter } from "./_core/systemRouter";
+// systemRouter removed - Manus-specific features not needed
 import { publicProcedure, router } from "./_core/trpc";
 import { cricketRouter } from "./cricketRouters";
 import { teamsRouter } from "./teamsRouters";
@@ -16,7 +16,7 @@ import { generateToken } from "./auth";
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
-  system: systemRouter,
+  // system router removed - using standard authentication
   cricket: cricketRouter,
   teams: teamsRouter,
   user: userRouter,
