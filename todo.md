@@ -1561,3 +1561,14 @@ User reported favicon not showing on live website:
 - [x] Test on local dev server (favicon displaying correctly)
 - [x] Commit and push to GitHub (commit f28f4c9)
 - [ ] Verify on live website after Railway deployment (waiting 2-3 minutes)
+
+
+## 📞 REMOVE PHONE NUMBER - Dec 31, 2025
+
+User requested to remove phone number and business hours:
+- [x] Find contact page component (NewContact.tsx)
+- [x] Remove phone number section (+91 XXXX-XXXXXX)
+- [x] Remove business hours (Monday - Friday, 10 AM - 6 PM IST)
+- [x] Remove unused Phone icon import
+- [ ] Commit and push to GitHub
+- [ ] Verify on live website

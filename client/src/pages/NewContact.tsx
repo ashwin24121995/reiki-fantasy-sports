@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, MapPin, Send } from 'lucide-react';
 import { toast } from 'sonner';
 
 export default function NewContact() {
@@ -192,21 +192,6 @@ export default function NewContact() {
                           </p>
                           <p className="text-xs text-muted-foreground mt-1">
                             We typically respond within 24-48 hours
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start gap-4">
-                        <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                          <Phone className="h-5 w-5 text-primary" />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold mb-1">Phone</h4>
-                          <p className="text-sm text-muted-foreground">
-                            +91 XXXX-XXXXXX
-                          </p>
-                          <p className="text-xs text-muted-foreground mt-1">
-                            Monday - Friday, 10 AM - 6 PM IST
                           </p>
                         </div>
                       </div>
