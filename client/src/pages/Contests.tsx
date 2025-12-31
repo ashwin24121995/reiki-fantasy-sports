@@ -94,7 +94,9 @@ export default function Contests() {
               <CardContent className="py-12 text-center">
                 <Trophy className="h-12 w-12 mx-auto mb-4 text-muted-foreground" />
                 <p className="text-lg text-muted-foreground">
-                  No {selectedTab} matches available at the moment
+                  {selectedTab === 'upcoming' ? 'No upcoming matches scheduled yet' : 
+                   selectedTab === 'live' ? 'No live matches running' : 
+                   'No completed matches available yet'}
                 </p>
               </CardContent>
             </Card>

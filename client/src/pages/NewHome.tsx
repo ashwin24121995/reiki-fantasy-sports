@@ -321,7 +321,7 @@ export default function NewHome() {
             <Card className="border-dashed">
               <CardContent className="p-12 text-center">
                 <Activity className="w-16 h-16 mx-auto mb-4 text-muted-foreground opacity-50" />
-                <h3 className="text-xl font-semibold mb-2">No Live Matches</h3>
+                <h3 className="text-xl font-semibold mb-2">No live matches running</h3>
                 <p className="text-muted-foreground">Check back soon for live cricket action!</p>
               </CardContent>
             </Card>
@@ -419,7 +419,7 @@ export default function NewHome() {
             <Card className="border-dashed">
               <CardContent className="p-12 text-center">
                 <Clock className="w-16 h-16 mx-auto mb-4 text-muted-foreground opacity-50" />
-                <h3 className="text-xl font-semibold mb-2">No Upcoming Matches</h3>
+                <h3 className="text-xl font-semibold mb-2">No upcoming matches scheduled yet</h3>
                 <p className="text-muted-foreground">Check back soon for new matches!</p>
               </CardContent>
             </Card>

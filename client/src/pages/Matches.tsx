@@ -346,7 +346,7 @@ export default function Matches() {
                 <div className="text-center py-12">
                   <Calendar className="h-16 w-16 mx-auto mb-4 text-muted-foreground" />
                   <h3 className="text-xl font-semibold mb-2">
-                    {activeFilterCount > 0 ? 'No Matches Found' : 'No Upcoming Matches'}
+                    {activeFilterCount > 0 ? 'No Matches Found' : 'No upcoming matches scheduled yet'}
                   </h3>
                   <p className="text-muted-foreground mb-4">
                     {activeFilterCount > 0
@@ -374,7 +374,7 @@ export default function Matches() {
                 <div className="text-center py-12">
                   <Trophy className="h-16 w-16 mx-auto mb-4 text-muted-foreground" />
                   <h3 className="text-xl font-semibold mb-2">
-                    {activeFilterCount > 0 ? 'No Matches Found' : 'No Live Matches'}
+                    {activeFilterCount > 0 ? 'No Matches Found' : 'No live matches running'}
                   </h3>
                   <p className="text-muted-foreground mb-4">
                     {activeFilterCount > 0
@@ -402,7 +402,7 @@ export default function Matches() {
                 <div className="text-center py-12">
                   <Clock className="h-16 w-16 mx-auto mb-4 text-muted-foreground" />
                   <h3 className="text-xl font-semibold mb-2">
-                    {activeFilterCount > 0 ? 'No Matches Found' : 'No Completed Matches'}
+                    {activeFilterCount > 0 ? 'No Matches Found' : 'No completed matches available yet'}
                   </h3>
                   <p className="text-muted-foreground mb-4">
                     {activeFilterCount > 0

@@ -1420,3 +1420,34 @@ Section: Feature cards below hero (No Real Money, Real Cricket Data, Fair Play C
 
 **Quality Score**: 10/10
 **Recommendation**: ✅ PRODUCTION READY
+
+
+---
+
+## 🔍 MATCH DISPLAY INVESTIGATION - Dec 31, 2025
+
+**User Issue**: Upcoming and live matches not showing on website
+
+**Tasks**:
+- [ ] Check Cricket API for available live/upcoming matches
+- [ ] Review cricket sync service (server/cricketSync.ts)
+- [ ] Verify match status filtering logic
+- [ ] Check database for match status values
+- [ ] Fix any issues with match fetching
+- [ ] Manually trigger sync to populate matches
+- [ ] Verify matches display correctly on homepage and Matches page
+- [ ] Test match filtering (upcoming, live, completed)
+
+
+---
+
+## 📝 Empty State Message Improvements (Dec 30, 2025)
+- [x] Update Matches page - Upcoming tab: "No upcoming matches scheduled yet"
+- [x] Update Matches page - Live tab: "No live matches running"
+- [x] Update Matches page - Completed tab: "No completed matches available yet"
+- [x] Update Contests page - Upcoming tab: "No upcoming matches scheduled yet"
+- [x] Update Contests page - Live tab: "No live matches running"
+- [x] Update Contests page - Completed tab: "No completed matches available yet"
+- [x] Update Homepage - Live matches section: "No live matches running"
+- [x] Update Homepage - Upcoming matches section: "No upcoming matches scheduled yet"
+- [x] Test all empty states display correctly
