@@ -1527,5 +1527,5 @@ User provided new logo versions with correct theme logic:
 - [x] Fix Footer.tsx to use same logic
 - [x] Fix Login.tsx to use same logic
 - [x] Fix Register.tsx to use same logic
-- [ ] Commit and push to GitHub
-- [ ] Verify on live website after Railway deployment
+- [x] Commit and push to GitHub (commit 2f703ea - force pushed)
+- [ ] Verify on live website after Railway deployment (waiting 3 minutes)
