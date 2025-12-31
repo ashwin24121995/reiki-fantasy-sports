@@ -21,6 +21,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Progress } from '@/components/ui/progress';
 import { Loader2, AlertCircle, CheckCircle2, User, Mail, Lock, MapPin, Eye, EyeOff, ArrowLeft, ArrowRight } from 'lucide-react';
+import { useTheme } from '@/contexts/ThemeContext';
 
 const INDIAN_STATES = [
   'Andaman and Nicobar Islands',
@@ -72,7 +73,8 @@ const BANNED_STATES = [
 
 export default function Register() {
   const [, setLocation] = useLocation();
-  const { register, isLoading: authLoading } = useAuth();
+  const { register: registerUser, isLoading: authLoading } = useAuth();
+  const { theme } = useTheme();
 
   const [step, setStep] = useState(1); // 1: Personal Info, 2: Location, 3: Password, 4: Confirm
   const [formData, setFormData] = useState({
@@ -225,11 +227,27 @@ export default function Register() {
   const progress = (step / 4) * 100;
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 dark:from-gray-900 dark:to-gray-800 p-4 py-8">
-      <Card className="w-full max-w-md shadow-2xl">
+    <div className="min-h-screen flex items-center justify-center p-4 py-8 relative overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/auth-background.webp"
+          alt="Cricket Stadium"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+      </div>
+      
+      {/* Content */}
+      <div className="relative z-10 w-full max-w-md">
+      <Card className="w-full shadow-2xl bg-background/95 backdrop-blur-md border-2">
         <CardHeader className="space-y-1 pb-4">
           <div className="flex items-center justify-center mb-4">
-            <img src="/logo-reiki-energy-full.webp" alt="REIKI ENERGY" className="h-12" />
+            <img
+              src={theme === 'dark' ? '/logo-light.webp' : '/logo-dark.webp'}
+              alt="REIKI ENERGY"
+              className="h-12"
+            />
           </div>
           <CardTitle className="text-3xl font-bold text-center bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
             Create Free Account
@@ -543,6 +561,7 @@ export default function Register() {
           </form>
         </CardContent>
       </Card>
+      </div>
     </div>
   );
 }

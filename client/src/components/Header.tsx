@@ -89,7 +89,7 @@ export default function Header() {
           <Link href="/">
             <a className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <img
-                src="/logo-reiki-energy-full.webp"
+                src={theme === 'dark' ? '/logo-light.webp' : '/logo-dark.webp'}
                 alt="REIKI ENERGY"
                 className="h-10 w-auto object-contain"
               />
