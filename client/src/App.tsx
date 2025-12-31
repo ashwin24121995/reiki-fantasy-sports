@@ -35,6 +35,7 @@ import Leaderboard from "./pages/Leaderboard";
 import Profile from "./pages/Profile";
 import Contests from "./pages/Contests";
 import ContestDetails from "./pages/ContestDetails";
+import MatchDetails from "./pages/MatchDetails";
 
 function Router() {
   return (
@@ -67,6 +68,7 @@ function Router() {
       <Route path={"/profile"} component={Profile} />
       <Route path={"/contests"} component={Contests} />
       <Route path={"/contests/:id"} component={ContestDetails} />
+      <Route path={"/match/:id"} component={MatchDetails} />
       
       {/* 404 */}
       <Route path={"/404"} component={NotFound} />

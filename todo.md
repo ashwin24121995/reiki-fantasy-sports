@@ -1451,3 +1451,13 @@ Section: Feature cards below hero (No Real Money, Real Cricket Data, Fair Play C
 - [x] Update Homepage - Live matches section: "No live matches running"
 - [x] Update Homepage - Upcoming matches section: "No upcoming matches scheduled yet"
 - [x] Test all empty states display correctly
+
+
+---
+
+## 🐛 View Results Button Fix (Dec 31, 2025)
+- [x] Investigate where "View Results" button links to on completed match cards
+- [x] Check if match results page/route exists in App.tsx
+- [x] Fix "View Results" button to link to correct page or create match results page (created MatchDetails.tsx)
+- [x] Test "View Results" button works without 404 error
+- [x] Verify match results display correctly (scores, winner, player stats)
