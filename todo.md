@@ -1513,3 +1513,19 @@ Section: Feature cards below hero (No Real Money, Real Cricket Data, Fair Play C
 - [ ] Make trivial change to trigger fresh deployment
 - [ ] Push to GitHub to force Railway redeploy
 - [ ] Verify Railway deploys with new code (check logs for __dirname instead of import.meta.dirname)
+
+
+---
+
+## 🔄 LOGO REPLACEMENT - Dec 31, 2025
+
+User provided new logo versions with correct theme logic:
+- [x] Copy new logo-dark.png (black solid text - for LIGHT theme backgrounds)
+- [x] Copy new logo-light.png (white outlined text - for DARK theme backgrounds)
+- [x] Convert both to WebP format (logo-dark: 26KB, logo-light: 19KB)
+- [x] Fix Header.tsx to use: logo-dark.webp with dark:hidden, logo-light.webp with hidden dark:block
+- [x] Fix Footer.tsx to use same logic
+- [x] Fix Login.tsx to use same logic
+- [x] Fix Register.tsx to use same logic
+- [ ] Commit and push to GitHub
+- [ ] Verify on live website after Railway deployment

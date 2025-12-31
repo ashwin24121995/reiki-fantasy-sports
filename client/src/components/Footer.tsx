@@ -49,12 +49,12 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center">
               <img
-                src="/logo-light.webp"
+                src="/logo-dark.webp"
                 alt="REIKI ENERGY"
                 className="h-12 w-auto object-contain dark:hidden"
               />
               <img
-                src="/logo-dark.webp"
+                src="/logo-light.webp"
                 alt="REIKI ENERGY"
                 className="h-12 w-auto object-contain hidden dark:block"
               />

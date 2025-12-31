@@ -119,8 +119,8 @@ export default function Login() {
       <Card className="w-full max-w-md shadow-2xl relative z-10 bg-background/95 backdrop-blur-md border-2">
         <CardHeader className="space-y-1 pb-6">
           <div className="flex items-center justify-center mb-4">
-            <img src="/logo-light.webp" alt="REIKI ENERGY" className="h-12 dark:hidden" />
-            <img src="/logo-dark.webp" alt="REIKI ENERGY" className="h-12 hidden dark:block" />
+            <img src="/logo-dark.webp" alt="REIKI ENERGY" className="h-12 dark:hidden" />
+            <img src="/logo-light.webp" alt="REIKI ENERGY" className="h-12 hidden dark:block" />
           </div>
           <CardTitle className="text-3xl font-bold text-center bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
             Welcome Back!
