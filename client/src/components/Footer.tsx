@@ -7,12 +7,10 @@
 import { Link } from 'wouter';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { useTheme } from '@/contexts/ThemeContext';
 
 export default function Footer() {
   const { isAuthenticated } = useAuth();
   const { t } = useLanguage();
-  const { theme } = useTheme();
 
   const currentYear = new Date().getFullYear();
 
@@ -51,9 +49,14 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center">
               <img
-                src={theme === 'dark' ? '/logo-light.webp' : '/logo-dark.webp'}
+                src="/logo-light.webp"
                 alt="REIKI ENERGY"
-                className="h-12 w-auto object-contain"
+                className="h-12 w-auto object-contain dark:hidden"
+              />
+              <img
+                src="/logo-dark.webp"
+                alt="REIKI ENERGY"
+                className="h-12 w-auto object-contain hidden dark:block"
               />
             </div>
             <p className="text-sm text-muted-foreground">
