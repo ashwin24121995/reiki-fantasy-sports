@@ -1540,3 +1540,13 @@ User requested logo size adjustment:
 - [x] Update Footer.tsx logo size to w-[71px] h-20 (80px)
 - [x] Commit and push to GitHub (commit 9b9b1f6)
 - [ ] Verify on live website (waiting for Railway deployment)
+
+
+## 📏 LOGO SIZE ADJUSTMENT (REVISED) - Dec 31, 2025
+
+User made visual edit through UI editor - apply to both header and footer:
+- [x] Update Header.tsx logo size to 114px width × 70px height (both light and dark logos)
+- [x] Update Footer.tsx logo size to 114px width × 70px height (both light and dark logos)
+- [x] Clean up inline styles, use consistent approach
+- [ ] Commit and push to GitHub
+- [ ] Verify on live website

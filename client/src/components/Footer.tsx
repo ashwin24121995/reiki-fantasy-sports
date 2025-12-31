@@ -51,12 +51,14 @@ export default function Footer() {
               <img
                 src="/logo-dark.webp"
                 alt="REIKI ENERGY"
-                className="w-[71px] h-20 object-contain dark:hidden"
+                className="object-contain dark:hidden"
+                style={{width: '114px', height: '70px'}}
               />
               <img
                 src="/logo-light.webp"
                 alt="REIKI ENERGY"
-                className="w-[71px] h-20 object-contain hidden dark:block"
+                className="object-contain hidden dark:block"
+                style={{width: '114px', height: '70px'}}
               />
             </div>
             <p className="text-sm text-muted-foreground">
